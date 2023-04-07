@@ -34,7 +34,7 @@ plugins:
   - kramdown-parser-gfm
   - jekyll-redirect-from
 
-exclude: 
+exclude:
   - Gemfile
   - clean-theme.gemspec
   - Gemfile.lock
@@ -75,8 +75,9 @@ highlighter: rouge
 footer_menu: example_footer_menu
 
 collections:
-  products: 
+  products:
     output: true
     layout: product
     image: https://via.placeholder.com/800x600
     show_sidebar: false
+theme: bulma-clean-theme
