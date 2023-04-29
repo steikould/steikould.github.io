@@ -65,8 +65,8 @@ a:focus {
 }
 
 a.btn-cta-primary, .btn-cta-primary {
-  background: #54ba4e;
-  border: 1px solid #54ba4e;
+  background: #AEB9F8;
+  border: 1px solid #AEB9F8;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -648,8 +648,8 @@ a.dotted-link:hover {
 }
 
 .dark-mode-switch .form-check-input:checked {
-  background-color: #54ba4e;
-  border-color: #54ba4e;
+  background-color: #AEB9F8;
+  border-color: #AEB9F8;
 }
 
 .dark-mode-switch .form-check-input:focus {
@@ -672,7 +672,7 @@ body[data-theme="dark"] a.btn:hover {
 }
 
 body[data-theme="dark"] .dark-mode-switch .form-check-input:focus {
-  border-color: #54ba4e;
+  border-color: #AEB9F8;
 }
 
 body[data-theme="dark"] .header {
