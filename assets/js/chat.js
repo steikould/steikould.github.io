@@ -68,11 +68,11 @@ const ChatPortfolioModule = {
         if (userMessage) {
             this.addMessageToDisplay(userMessage, 'user');
             this.elements.chatInput.value = '';
-            this.processUserMessage(userMessage.toLowerCase());
+            this.processUserMessage(userMessage); // Pass original case for backend, backend can toLowerCase if needed
         }
     },
 
-    // --- Data Fetching Helper Methods ---
+    // --- Data Fetching Helper Methods (currently unused by backend-driven processUserMessage) ---
     _fetchAboutInfo: function() {
         const aboutMeElement = document.querySelector('[data-ai-info="about-me"]');
         return aboutMeElement ? aboutMeElement.textContent.trim() : null;
@@ -112,8 +112,8 @@ const ChatPortfolioModule = {
 
         let notableText = "Here's some of Maxime's notable work/articles:\n";
         notableWorks.forEach(work => {
-            const title = work.querySelector('[data-ai-project-title]')?.textContent || 'N/A'; // Re-using project-title for consistency
-            const description = work.querySelector('[data-ai-project-description]')?.textContent || 'N/A'; // Re-using project-description
+            const title = work.querySelector('[data-ai-project-title]')?.textContent || 'N/A';
+            const description = work.querySelector('[data-ai-project-description]')?.textContent || 'N/A';
             notableText += `\n- ${title.trim()}: ${description.trim()}\n`;
         });
         return notableText;
@@ -134,7 +134,7 @@ const ChatPortfolioModule = {
                 skillsText += `\n- ${skillName} (${skillLevel})`;
             });
             skillsText += "\n\nPS: You can also ask me to 'visualize skills' for a chart view!";
-        } else if (!skillsIntro) { // No intro and no skills
+        } else if (!skillsIntro) {
             return null;
         }
         return skillsText;
@@ -178,47 +178,64 @@ const ChatPortfolioModule = {
         return hasContent ? contactText : null;
     },
 
-    processUserMessage: function(message) {
+    // Method to process user message - NOW USES BACKEND
+    processUserMessage: async function(message) { // Made async
+        // Old local processing logic is commented out/removed as per instructions.
+        /*
         let botResponse = "Sorry, I'm still learning. I didn't understand that. You can ask about experience, projects, skills, education, GitHub activity, resume, or contact information.";
-
-        if (message.includes('hello') || message.includes('hi')) {
-            botResponse = "Hello there! How can I help you learn about Maxime's experience today?";
-        } else if (message.includes('about yourself') || message.includes('about you') || message.includes('who are you')) {
-            const aboutInfo = this._fetchAboutInfo();
-            botResponse = aboutInfo || "I couldn't find the 'About Me' information.";
-        } else if (message.includes('experience') || message.includes('work experience')) { // more specific for work experience
-            const expInfo = this._fetchExperienceInfo();
-            botResponse = expInfo || "I couldn't find any work experience information.";
-        } else if (message.includes('notable work') || message.includes('articles')) {
-            const notableInfo = this._fetchNotableWorkInfo();
-            botResponse = notableInfo || "I couldn't find any notable work or articles.";
-        } else if (message.includes('project')) { // General projects, typically "Latest Projects"
-            const projInfo = this._fetchProjectsInfo();
-            botResponse = projInfo || "I couldn't find any project information.";
-        } else if (message.includes('chart skills') || message.includes('visualize skills') || message.includes('show skills chart')) {
-            botResponse = "Okay, I'm generating a chart of Maxime's skills for you...";
-            setTimeout(() => { this.renderSkillsChart(); }, 500);
-        } else if (message.includes('skill')) {
-            const skillsData = this._fetchSkillsInfo();
-            botResponse = skillsData || "I couldn't find any skills information.";
-        } else if (message.includes('education')) {
-            const eduInfo = this._fetchEducationInfo();
-            botResponse = eduInfo || "I couldn't find any education information.";
-        } else if (message.includes('github') || message.includes('contributions') || message.includes('activity')) {
-            botResponse = "You can see Maxime's GitHub activity chart further down the page. I'll scroll you to it now!";
-            if (this.elements.githubGraph) {
-                setTimeout(() => { this.elements.githubGraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 600);
-            } else {
-                botResponse = "I found the GitHub activity information, but I couldn't automatically scroll you to it.";
-            }
-        } else if (message.includes('resume') || message.includes('cv') || message.includes('curriculum vitae')) {
-            botResponse = "You can download Maxime's resume: <a href='MaxCourseyJuly2024.pdf' target='_blank' rel='noopener noreferrer'>MaxCourseyJuly2024.pdf</a>";
-        } else if (message.includes('contact') || message.includes('email') || message.includes('location')) {
-            const contactDetails = this._fetchContactInfo();
-            botResponse = contactDetails || "I couldn't find contact information.";
-        }
-
+        // ... all the if/else if blocks for local intent matching ...
         setTimeout(() => { this.addMessageToDisplay(botResponse, 'bot'); }, 500);
+        */
+
+        // New logic to call the backend
+        try {
+            const response = await fetch('http://127.0.0.1:5000/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // Sending the original message casing, backend can convert toLower if needed
+                body: JSON.stringify({ message: message })
+            });
+
+            if (!response.ok) {
+                let errorData;
+                try {
+                    errorData = await response.json();
+                } catch (e) {
+                    // If response is not JSON or empty
+                    errorData = null;
+                }
+                // Construct a user-friendly error message
+                const errorMessageDetail = errorData && errorData.error ? errorData.error : `Server responded with status ${response.status}`;
+                this.addMessageToDisplay(`Sorry, I encountered an issue: ${errorMessageDetail}. Please try again later or contact support if the problem persists.`, 'bot');
+                console.error('Error from backend:', response.status, errorData);
+                return;
+            }
+
+            const responseData = await response.json();
+            if (responseData && responseData.reply) {
+                // Check for special commands if backend might send them (e.g. for scrolling or charting)
+                if (responseData.action === 'scroll_to_github') {
+                     this.addMessageToDisplay(responseData.reply, 'bot');
+                    if (this.elements.githubGraph) {
+                        setTimeout(() => { this.elements.githubGraph.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 600);
+                    }
+                } else if (responseData.action === 'render_skills_chart') {
+                     this.addMessageToDisplay(responseData.reply, 'bot');
+                    setTimeout(() => { this.renderSkillsChart(); }, 500);
+                } else {
+                    this.addMessageToDisplay(responseData.reply, 'bot');
+                }
+            } else {
+                this.addMessageToDisplay("Sorry, I received an unexpected response from the server.", 'bot');
+                console.error('Unexpected response format:', responseData);
+            }
+
+        } catch (error) {
+            console.error('Network error or other issue calling backend:', error);
+            this.addMessageToDisplay("I'm having trouble connecting to my brain (the server). Please check your internet connection and ensure the backend server is running. Try again later.", 'bot');
+        }
     },
 
     renderSkillsChart: function() {

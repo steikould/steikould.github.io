@@ -1,0 +1,96 @@
+{
+  "aboutMe": "My professional and personal goals seems to blend together. I've always believed integrity and empathy should be pervasive in all that I do. On top of this, I'm accountable and continually drive work towards completion. I used to work for an international consulting firm performing automation work for complex data migrations, or financial data processing. I did very well but not spectacular. So, later when my wife's career took off, I decided to get my master's and started working as a Research Software engineer at Vanderbilt's Computer Science Laboratory. Currently, I work as a data engineer at Gordon Food Services. In the evenings and weekends I'm either playing some high-level competitive tennis with my men's USTA team, helping my kids with math and science homework, or planning my next big trip to Mexico or South Korea.",
+  "latestProjects": [
+    {
+      "title": "GCP BigQuery - Incorporating Enterprise Data Projects & Stuff (Demo Project)",
+      "description": "Check out some of my work helping a $16B food distribution and logistics company develop a new BigQuery datalake. This includes batch and streaming data pipelines, distributed data moving with Dataflow (i.e. Apache Beam), some composing with Airflow, and tons of research on data governance, lineage, metadata. I also dive into costs, efficiency, when the datalake didn't make sense, and some tools we developed to make things easier for everyone.",
+      "link": "#",
+      "image": "assets/images/projects/stormylakegcp.png"
+    },
+    {
+      "title": "Research Work at Vanderbilt",
+      "description": "As a research engineer in the Computer Science Research Lab. I helped on the implementation of Cyber-physical Systems (CPS) with Artificial Intelligence components. This included public transit systems, emergency response systems and power grids.",
+      "link": "https://www.scopelab.ai/",
+      "image": "assets/images/projects/cps.png"
+    },
+    {
+      "title": "On-Demand Transit and Booking App (Demo Project)",
+      "description": "I developed a web application that utilizes machine learning models to optimize passenger scheduling for small bus vehicles and provides the transit compa book requests, cancel trips, manually edit passenger and vehicle schedules, and view overall peformance history.  The application, built in Dash Plotly (react.js) and deployed on Google App Engine, features an interactive scheduling platform for fleet operators, communicates with vehicles to display real-time vehicle location and passenger activities, and provides automated tools to increase the speed and accuracy of manual trip booking, cancellation, and rerouting. The application also provides a dashboard to review and analyze vehicle or driver performance, passenger history, and integrates google authorization and secure APIs our MongoDB document database.",
+      "link": "#",
+      "image": "assets/images/projects/project-2.png"
+    },
+    {
+      "title": "Do you like Wine? Check out my brother.",
+      "description": "My brother has traveled the world, working in wineries in France, South America, and New Zealand.  After working for some of the most prestigious wineries in California, he ventured out on his own.",
+      "link": "https://www.courseygraves.com/club/",
+      "image": "assets/images/projects/courseygraves.png"
+    }
+  ],
+  "notableWork": [
+    {
+      "title": "Developers don't always get to choose...",
+      "description": "BigQuery replication to MySQL?  Not my first choice, but we sometimes have to do things we're not happy with.  While database replication is easy, there can always be factors outside our control that can make things hard.  Click below to read more about how the requirements of having an Apache Beam Job written in Python and a CloudSQL instance limited by price stumped even the support engineers at Google (from experience - I'm starting to think it may not be that hard...) ",
+      "link": null
+    },
+    {
+      "title": "Hacking Dash Plotly",
+      "description": "While Dash provides a simple interface for creating Python callbacks that can update the layout of the application, it does not provide an easy way to incorporate client-side JavaScript callbacks that can interact with the Python code. This can be especially seen when we started incorporating JavaScript libraries for drag and drop features and for firebase authentication. While I knew enough JavaScript to begin writing ClientSide Callbacks, working with these libraries required some workarounds. ",
+      "link": "dash.html"
+    },
+    {
+      "title": "Las Vegas City Center - How we saved MGM millions and made no profit",
+      "description": "As a consultant, I was fortunate enough to work on one of the largest private construction projects ($8.5B) ever in the United States. High profile projects like this drew every consulting company to bid.  This fee pressure combined with the project running billions overbudget, I'd say we're extremely lucky to not have lost money.  As part of this project, we outsourced terrabytes of data processing, I instigated the creation of new automation tools, reducing our workload by half. ",
+      "link": null
+    },
+    {
+      "title": "Free Coffee Table Book Side Hustle Idea",
+      "description": "The main reason I left my consulting job was the intense travel.  Some years, I might have been away for months at a time.  Most of my clients, were large manufacturing, skyscaper developers, large retail/restaurant chains, or software companies. One regret I have was not taking pictures of all the cool things I got to see.  How many jobs could you see how an automatic transmission is made one week, ride the elevator to the 70th floor of a skyscaper under construction in NYC the next, to being standing on the rooftop of a Target in Colorado because the manager wanted you to show you the view of the Rockies.  I was fortunate enough to work with so many different companies and meet so many personalities, it made me appreciate the art of products.  The beauty of an aluminum transmission part thrown away because it didn't meet specs, or the fact that target intentionally makes the entrance super bright to appear more <inviting class=""></inviting>",
+      "link": null
+    }
+  ],
+  "experience": [
+    {
+      "title": "Data Engineer - Gordon Food Services - Technology Hub",
+      "company": "Gordon Food Services - Technology Hub",
+      "duration": "(2022 - Present)",
+      "description": "Design, develop, and maintained core data pipelines and operations for a 16B food service and logistics company.  Creating EL/ETL pipelines in Google Cloud using serverless and distributed computing frameworks such as Apache Beam (Dataflow) for BigQuery including SQL query creation and tuning. Also includes debugging, data wrangling, performance tuning."
+    },
+    {
+      "title": "Research Software Engineer - Vanderbilt University - Institute for Software Integrated Systems",
+      "company": "Vanderbilt University - Institute for Software Integrated Systems",
+      "duration": "(2021 - 2022)",
+      "description": ""
+    },
+    {
+      "title": "Managing Consultant - Grant Thornton",
+      "company": "Grant Thornton",
+      "duration": "",
+      "description": "Managed business automation and technology savings projects related to financial and tax processes and software.  Started out performing data analytics and moved to overall project management handling client communications, project design/scope, scheduling, and team development."
+    }
+  ],
+  "skills": {
+    "intro": "Currently, I work with distributed ELT/ELT/EL data pipelines, APIs, microservices generally within AWS/GCP Cloud. I've also done some fullstack development with pilot implementations of data-intensive geospatial websites and dashboards.",
+    "list": [
+      { "name": "Python", "level": "Expert", "percentage": "96" },
+      { "name": "AWS/GCP Architecture", "level": "Expert", "percentage": "94" },
+      { "name": "SQL Database Development/Maintenance/Query Tuning", "level": "Expert", "percentage": "93" },
+      { "name": "Apache Spark/Beam, Pandas", "level": "Pro", "percentage": "86" },
+      { "name": "Docker, Terraform, Bash", "level": "Pro", "percentage": "86" }
+    ]
+  },
+  "education": [
+    {
+      "degree": "MSc Computer Science",
+      "university": "Vanderbilt University"
+    },
+    {
+      "degree": "BSCEE",
+      "university": "Georgia Institute of Technology"
+    }
+  ],
+  "contact": {
+    "location": "Atlanta, Georgia US",
+    "email": "mxmcoursey@gmail.com",
+    "website": "https://www.steikould.github.io"
+  }
+}
