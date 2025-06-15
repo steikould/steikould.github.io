@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Details | Maxime Coursey</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Details">
+    <meta name="author" content="Maxime Coursey">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- Project Detail Page Specific CSS (can be same as projects.css or new) -->
+    <link rel="stylesheet" href="assets/css/project_detail.css">
+
+</head>
+<body>
+    <header class="header text-center">
+        <div class="container">
+            <!-- Project Title will be dynamically inserted here by JS -->
+            <h1 id="project-title" class="name display-4 py-3">Project Title</h1>
+            <div class="profile-content">
+                 <p><a href="projects.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to All Projects</a></p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container sections-wrapper py-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <article id="project-detail-content" class="project-detail-article shadow-sm rounded p-4">
+                    <!-- Image -->
+                    <div class="text-center mb-4">
+                        <img id="project-image" src="assets/images/projects/project-placeholder.png" class="img-fluid rounded" alt="Project Image" style="max-height: 400px;">
+                    </div>
+
+                    <!-- Extended Description -->
+                    <section class="project-section mb-4">
+                        <h2 class="section-title h4">About This Project</h2>
+                        <p id="project-extended-description">Detailed description of the project...</p>
+                    </section>
+
+                    <!-- Tech Stack -->
+                    <section class="project-section mb-4">
+                        <h2 class="section-title h4">Technologies Used</h2>
+                        <ul id="project-tech-stack" class="list-inline">
+                            <!-- <li class="list-inline-item"><span class="badge bg-secondary">Tech 1</span></li> -->
+                        </ul>
+                    </section>
+
+                    <!-- Technical Complexity -->
+                    <section class="project-section mb-4">
+                        <h2 class="section-title h4">Technical Complexity & Challenges</h2>
+                        <p id="project-technical-complexity">Notes on technical complexity...</p>
+                    </section>
+
+                    <!-- Value Created -->
+                    <section class="project-section mb-4">
+                        <h2 class="section-title h4">Value Created</h2>
+                        <p id="project-value-created">Value created by the project...</p>
+                    </section>
+
+                    <!-- Links -->
+                    <section class="project-section project-links mb-3">
+                        <h2 class="section-title h4">Project Links</h2>
+                        <div id="project-links-container">
+                            <!-- Links will be populated here, e.g.
+                            <a href="#" id="project-live-demo" class="btn btn-primary me-2 mb-2" target="_blank" style="display:none;"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" id="project-source-code" class="btn btn-secondary mb-2" target="_blank" style="display:none;"><i class="fab fa-github"></i> Source Code</a>
+                            -->
+                        </div>
+                    </section>
+
+                </article>
+            </div>
+        </div><!--//row-->
+    </div><!--//container-->
+
+    <footer class="footer text-center py-4">
+        <small class="copyright">Maxime Coursey &copy; <script>document.write(new Date().getFullYear())</script></small>
+    </footer>
+
+    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.min.js"></script>
+    <script type="text/javascript" src="assets/js/project_detail.js"></script>
+</body>
+</html>

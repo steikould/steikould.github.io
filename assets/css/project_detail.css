@@ -1,0 +1,43 @@
+/* assets/css/project_detail.css */
+/* Styles for the project detail page */
+
+.project-detail-article {
+    background-color: #fff; /* Light theme background for the article box */
+}
+
+.project-section .section-title {
+    border-bottom: 2px solid #007bff; /* Bootstrap primary color */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.project-links a.btn {
+    margin-right: 0.5rem;
+}
+
+#project-tech-stack .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 0.75em;
+    margin: 0.25rem;
+}
+
+/* Dark mode adjustments */
+body[data-theme="dark"] .project-detail-article {
+    background-color: #2d3748; /* Dark card background */
+    border-color: #4a5568;
+    color: #e2e8f0; /* Lighter text for dark cards */
+}
+
+body[data-theme="dark"] .project-section .section-title {
+    border-bottom-color: #63b3ed; /* Lighter blue for dark mode */
+    color: #63b3ed;
+}
+
+body[data-theme="dark"] #project-tech-stack .badge {
+    background-color: #4a5568 !important; /* Ensure override if Bootstrap bg-secondary is too light */
+    color: #e2e8f0;
+}
+body[data-theme="dark"] .header h1 { /* Ensure header title is visible */
+    color: #e2e8f0;
+}

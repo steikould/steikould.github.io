@@ -1,0 +1,12 @@
+{
+  "id": "project-charlie",
+  "title": "Personalized E-commerce Recommendation Engine",
+  "image": "assets/images/projects/project-2.png",
+  "summaryDescription": "A recommendation system for an e-commerce platform that provides personalized product suggestions to users based on their browsing history and purchase patterns.",
+  "extendedDescription": "The core of this project is a collaborative filtering algorithm combined with content-based filtering to address cold-start problems. User interactions, product metadata, and purchase histories are processed in a batch pipeline to update recommendation models daily. A/B testing was used extensively to evaluate different recommendation strategies and their impact on conversion rates.",
+  "techStack": ["Python", "Scikit-learn", "Apache Spark", "Hadoop HDFS", "Airflow", "Redis"],
+  "technicalComplexityNotes": "Scalability was a key concern, as the platform handles millions of users and products. Generating recommendations with low latency for active users required an efficient serving infrastructure. Another challenge was mitigating bias in recommendations and ensuring diversity in suggested products.",
+  "valueCreated": "Increased user engagement by 20% (measured by click-through rate on recommendations) and boosted average order value by 8% for users interacting with recommended products.",
+  "liveDemoLink": null,
+  "sourceCodeLink": "https://github.com/maxwellmadewell/project-charlie-example"
+}

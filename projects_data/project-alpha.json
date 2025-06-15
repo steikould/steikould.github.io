@@ -1,0 +1,12 @@
+{
+  "id": "project-alpha",
+  "title": "AI-Powered Customer Support Optimizer",
+  "image": "assets/images/projects/project-featured.jpg",
+  "summaryDescription": "An AI tool that analyzes customer support tickets and suggests optimal routing and resolutions, reducing response times by 30%.",
+  "extendedDescription": "This project involved developing a machine learning model to understand natural language queries from customer support tickets. It classifies tickets by urgency and topic, then routes them to the most appropriate support agent or provides automated responses for common issues. The system continuously learns from agent feedback to improve its suggestions. We integrated a sentiment analysis component to prioritize highly dissatisfied customers.",
+  "techStack": ["Python", "TensorFlow", "NLTK", "Flask", "React", "PostgreSQL"],
+  "technicalComplexityNotes": "Key challenges included handling diverse language and slang in tickets, ensuring low-latency predictions for real-time routing, and building a feedback mechanism for continuous model improvement. The model was trained on a dataset of over 1 million historical tickets.",
+  "valueCreated": "Reduced average customer support response time by 30%, increased agent efficiency by 15%, and improved customer satisfaction scores by 10%.",
+  "liveDemoLink": null,
+  "sourceCodeLink": "https://github.com/maxwellmadewell/project-alpha-example"
+}
