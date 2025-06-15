@@ -1,0 +1,12 @@
+{
+  "id": "project-bravo",
+  "title": "Predictive Maintenance for Industrial IoT",
+  "image": "assets/images/projects/project-1.png",
+  "summaryDescription": "A system that uses sensor data from industrial machinery to predict potential failures, enabling proactive maintenance and minimizing downtime.",
+  "extendedDescription": "This project focused on analyzing time-series data from various sensors (temperature, vibration, pressure) attached to industrial equipment. We developed an anomaly detection model using LSTMs to identify patterns indicative of impending failures. A dashboard was created for plant managers to view equipment health scores and receive maintenance alerts. The solution was deployed on a cloud platform for scalability.",
+  "techStack": ["Python", "Keras", "Pandas", "MQTT", "InfluxDB", "Grafana", "Docker", "GCP"],
+  "technicalComplexityNotes": "Dealing with noisy sensor data and identifying subtle anomaly patterns were major technical hurdles. Ensuring the model could generalize across different types of machinery required careful feature engineering and domain expertise. The real-time data ingestion and processing pipeline also presented challenges.",
+  "valueCreated": "Successfully predicted over 80% of critical equipment failures with at least 72 hours notice, leading to a 25% reduction in unscheduled downtime and significant cost savings.",
+  "liveDemoLink": "https://example.com/iot-demo",
+  "sourceCodeLink": null
+}
