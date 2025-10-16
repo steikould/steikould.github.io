@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(for i in {2..8})",
+      "Bash(do cp headshot.jpg \"photo-$i.jpg\")",
+      "Bash(done)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
