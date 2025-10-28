@@ -77,7 +77,7 @@ export default function Hero() {
               <div className="flex items-center gap-6 mt-8 pt-8 border-t border-gray-700">
                 <div className="flex items-center gap-2 text-sm text-gray-400">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Atlanta, GA</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-400">
                   <Calendar className="w-4 h-4" />

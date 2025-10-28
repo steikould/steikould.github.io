@@ -1,13 +1,24 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import ProjectCard from './ProjectCard'
 import ProjectFilters from './ProjectFilters'
 import { projects, getProjectsByCategory } from '@/lib/projects'
 
-export default function ProjectGrid() {
-  const [activeFilter, setActiveFilter] = useState('all')
+interface ProjectGridProps {
+  initialCategory?: string
+}
+
+export default function ProjectGrid({ initialCategory }: ProjectGridProps) {
+  const [activeFilter, setActiveFilter] = useState(initialCategory || 'all')
+
+  // Update filter when URL parameter changes
+  useEffect(() => {
+    if (initialCategory) {
+      setActiveFilter(initialCategory)
+    }
+  }, [initialCategory])
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === 'all') {

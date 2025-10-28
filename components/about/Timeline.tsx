@@ -20,118 +20,141 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: '1',
-    title: 'Senior Data Engineer',
-    company: 'TechCorp Solutions',
-    location: 'San Francisco, CA',
-    startDate: '2022-03',
+    title: 'Senior Data Engineer & Business Strategist',
+    company: 'Colonial Pipeline',
+    location: 'Atlanta, GA',
+    startDate: 'April 2025',
     type: 'work',
     description: [
-      'Lead a team of 5 engineers in building scalable data infrastructure processing 10M+ events daily',
-      'Architected real-time ML pipeline platform reducing model deployment time from hours to minutes',
-      'Implemented automated data quality monitoring reducing data incidents by 85%'
+      'Architected intelligent sensor data transformation system converting sparse IoT streams into continuous time-series datasets using statistical ML models and automated outlier detection',
+      'Led multi-agent AI architecture for drag-reducing agent optimization, migrating legacy spreadsheet analysis into scalable web platform with natural language queries',
+      'Delivered enterprise AI transformation generating $1M+ annual savings through automated vendor selection, fuel blending optimization, and intelligent procurement'
     ],
-    technologies: ['Python', 'Apache Spark', 'Kubernetes', 'AWS', 'MLflow', 'Terraform'],
+    technologies: ['Python', 'Vertex AI', 'BigQuery', 'MLflow', 'LangGraph', 'RAG', 'Google ADK'],
     achievements: [
-      'Promoted to Senior Engineer in 18 months',
-      'Led migration to cloud-native architecture saving $200K annually',
-      'Mentored 3 junior engineers to successful promotions'
+      '$1M+ annual operational savings delivered',
+      'Built comprehensive MLOps framework for regulated industrial environments',
+      'Deployed intelligent procurement system saving $150K+ annually'
     ]
   },
   {
     id: '2',
-    title: 'Data Engineer',
-    company: 'DataFlow Analytics',
-    location: 'Austin, TX',
-    startDate: '2020-06',
-    endDate: '2022-03',
+    title: 'ML/Senior Data Engineer',
+    company: 'Gordon Food Services',
+    location: 'Advanced Analytics',
+    startDate: '2022',
+    endDate: 'April 2025',
     type: 'work',
     description: [
-      'Developed and maintained ETL pipelines processing terabytes of data across multiple sources',
-      'Built real-time fraud detection system achieving 99.2% accuracy with sub-100ms response times',
-      'Collaborated with data scientists to productionize ML models and automate deployment workflows'
+      'Transformed experimental TensorFlow notebook into enterprise-grade forecasting system with automated training pipelines and GPU acceleration on Vertex AI',
+      'Optimized model architecture using constraint optimization and mixed-integer programming, achieving 4% improvement over O9 Solutions baseline',
+      'Deployed production forecasting solution projected to deliver $1M annual savings, validated through five-year historical backtesting'
     ],
-    technologies: ['Python', 'Apache Kafka', 'PostgreSQL', 'Docker', 'Airflow', 'TensorFlow'],
+    technologies: ['TensorFlow', 'PyTorch', 'Vertex AI', 'BigQuery', 'Prophet', 'GreyKite', 'PySpark'],
     achievements: [
-      'Reduced data processing time by 60% through optimization',
-      'Implemented CI/CD practices for data pipelines',
-      'Received "Outstanding Performance" award 2021'
+      '$1M projected annual savings from forecasting system',
+      'Enhanced model training efficiency by 25%',
+      'Reduced BigQuery costs by 10% through strategic optimization'
     ]
   },
   {
     id: '3',
-    title: 'Junior Data Analyst',
-    company: 'StartupCo',
-    location: 'Remote',
-    startDate: '2019-01',
-    endDate: '2020-06',
+    title: 'Research Engineer/Developer',
+    company: 'Vanderbilt University - ScopeLab AI Research Lab',
+    location: 'Nashville, TN',
+    startDate: '2021',
+    endDate: '2022',
     type: 'work',
     description: [
-      'Analyzed customer behavior data to drive product decisions and optimize user experience',
-      'Created automated reporting dashboards reducing manual reporting time by 80%',
-      'Collaborated with product and engineering teams to implement data tracking and analytics'
+      'Architected scalable ETL pipeline infrastructure using PySpark, processing 10TB+ datasets across 5+ concurrent research projects',
+      'Built enterprise-grade data standardization platform that accelerated retraining cycles by 60% for 5+ researchers',
+      'Developed full-stack transportation optimization platform with real-time vehicle tracking and ML-based route optimization serving 50+ daily operations'
     ],
-    technologies: ['Python', 'SQL', 'Tableau', 'Google Analytics', 'BigQuery'],
+    technologies: ['PySpark', 'Pandas', 'AWS', 'GCP', 'Jupyter', 'SQL'],
     achievements: [
-      'Built company\'s first automated dashboard system',
-      'Identified key user retention insights driving 25% improvement',
-      'Transitioned from analyst to engineering role'
+      'Reduced research setup time from weeks to hours',
+      'Improved operational efficiency by 25%',
+      'Maintained 90%+ uptime SLA for ML experimentation infrastructure'
     ]
   },
   {
     id: '4',
-    title: 'Master of Science in Data Science',
-    company: 'University of California, Berkeley',
-    location: 'Berkeley, CA',
-    startDate: '2017-09',
-    endDate: '2019-05',
-    type: 'education',
+    title: 'Technical Lead & Founding Engineer',
+    company: 'Mobius.ai',
+    location: 'Nashville, TN',
+    startDate: '2019',
+    endDate: '2021',
+    type: 'work',
     description: [
-      'Specialized in machine learning, statistical modeling, and big data technologies',
-      'Thesis: "Real-time Anomaly Detection in Streaming Data Using Deep Learning"',
-      'Graduate Research Assistant - developed novel algorithms for time series forecasting'
+      'Sole technical architect responsible for end-to-end platform development from architecture through production deployment',
+      'Built complete data infrastructure processing 10TB+ datasets and full-stack applications serving 50+ daily users',
+      'Established scalable foundations enabling 5+ researchers to rapidly prototype and deploy ML solutions'
     ],
-    technologies: ['Python', 'R', 'TensorFlow', 'Apache Spark', 'Hadoop', 'MATLAB'],
+    technologies: ['Python', 'React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker'],
     achievements: [
-      'GPA: 3.9/4.0, Summa Cum Laude',
-      'Teaching Assistant for Machine Learning course',
-      'Published 2 papers in peer-reviewed conferences'
+      'Company remains profitable after 5+ years',
+      'Owned entire technical lifecycle from design to deployment',
+      'Built platform serving 50+ daily users with ML-powered optimization'
     ]
   },
   {
     id: '5',
-    title: 'Bachelor of Science in Computer Science',
-    company: 'University of Texas at Austin',
-    location: 'Austin, TX',
-    startDate: '2013-09',
-    endDate: '2017-05',
-    type: 'education',
+    title: 'Director, Business Technology Solutions',
+    company: 'Grant Thornton',
+    location: 'Atlanta, GA',
+    startDate: '2014',
+    endDate: '2019',
+    type: 'work',
     description: [
-      'Major in Computer Science with focus on algorithms, data structures, and software engineering',
-      'Minor in Mathematics with emphasis on statistics and linear algebra',
-      'Senior Capstone: Distributed computing system for large-scale data processing'
+      'Led team of 10-15 engineers managing $2-4M annual project portfolio across Fortune 500 clients',
+      'Delivered $100M+ in client value through digital transformation initiatives for tax and financial strategies',
+      'Drove automation initiatives generating multi-million-dollar savings by optimizing financial calculations and tax positioning'
     ],
-    technologies: ['Java', 'C++', 'Python', 'SQL', 'JavaScript', 'Git'],
+    technologies: ['SQL', 'Python', 'ETL Tools', 'ERP Systems', 'Data Warehousing'],
     achievements: [
-      'Dean\'s List all semesters',
-      'President of Computer Science Student Association',
-      'Winner of university-wide hackathon 2016'
+      'Scaled from Manager to Director in 3 years',
+      'Grew practice revenue by 15% with 80% team retention',
+      'Led migrations standardizing millions of financial records'
     ]
   },
   {
     id: '6',
-    title: 'AWS Certified Solutions Architect',
-    company: 'Amazon Web Services',
-    location: 'Online',
-    startDate: '2021-08',
-    type: 'certification',
+    title: 'Manager, National Leader Tax Technology Solutions',
+    company: 'Cherry Bekaert, LLP',
+    location: 'Atlanta, GA',
+    startDate: '2012',
+    endDate: '2014',
+    type: 'work',
     description: [
-      'Professional-level certification demonstrating expertise in designing distributed systems on AWS',
-      'Covers compute, networking, storage, and database AWS services',
-      'Validates ability to design cost-effective, fault-tolerant systems'
+      'Supported practice growth by architecting client acquisition processes, contributing to doubling practice size',
+      'Generated $2M+ annual revenue across 30+ concurrent engagements',
+      'Led technical hiring and project management across distributed teams in 5 locations'
     ],
+    technologies: ['Business Intelligence', 'SQL', 'Project Management Tools'],
     achievements: [
-      'Score: 920/1000 (Pass: 720)',
-      'Valid through August 2024'
+      'Doubled practice size generating $2M+ annual revenue',
+      'Improved project success rates by 30%',
+      'Reduced client onboarding time by 40%'
+    ]
+  },
+  {
+    id: '7',
+    title: 'Senior Associate, Tax Technology & Integration Services',
+    company: 'EY, LLP',
+    location: 'Atlanta, GA',
+    startDate: '2007',
+    endDate: '2011',
+    type: 'work',
+    description: [
+      'Architected enterprise data warehousing solution for $12B MGM CityCenter mega-project',
+      'Orchestrated cloud migration of 500GB+ critical data to MicroStrategy Cloud for 100+ users',
+      'Consistently achieved top-tier performance recognition (5/5 ratings, top 15% firmwide)'
+    ],
+    technologies: ['MicroStrategy', 'SQL', 'Data Warehousing', 'Cloud Migration'],
+    achievements: [
+      'Led technical design for $12B mega-project analytics',
+      'Early cloud adoption pioneer with enterprise migration',
+      'Top 15% firmwide performance consistently'
     ]
   }
 ]
@@ -164,7 +187,7 @@ export default function Timeline() {
   }
 
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-primary-dark">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -174,7 +197,7 @@ export default function Timeline() {
           className="text-center mb-16"
         >
           <h2 className="text-display-2 font-bold text-text-dark mb-6">
-            Experience & Education
+            Professional Experience
           </h2>
           <p className="text-body-lg text-text-muted max-w-2xl mx-auto">
             My journey through the world of data engineering, machine learning,
@@ -207,7 +230,7 @@ export default function Timeline() {
 
                   {/* Content Card */}
                   <div className="flex-1 md:flex-none md:w-[calc(100%-6rem)]">
-                    <Card className="overflow-hidden">
+                    <Card className="overflow-hidden bg-primary-dark-card">
                       <CardContent className="p-6">
                         {/* Header */}
                         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">

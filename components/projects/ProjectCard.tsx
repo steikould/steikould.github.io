@@ -20,9 +20,7 @@ export interface Project {
   technologies: string[]
   metrics: {
     hours: string
-    projects?: string
-    models?: string
-    datasets?: string
+    [key: string]: string | undefined
   }
   links: {
     github?: string
@@ -69,46 +67,8 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
       <Card className="h-full flex flex-col overflow-hidden group">
-        {/* Project Image/Header */}
-        <div className="h-8 bg-gradient-to-br from-primary-dark to-primary-dark-secondary relative overflow-hidden">
-          {/* Dynamic Background Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className={`absolute top-6 left-6 w-12 h-12 bg-gradient-to-br ${getCategoryColor(project.category)} rounded-lg transform rotate-12`}></div>
-            <div className="absolute top-8 right-8 w-8 h-8 border-2 border-accent-blue rounded-full"></div>
-            <div className="absolute bottom-8 left-12 w-6 h-6 bg-accent-blue transform rotate-45"></div>
-            <div className="absolute bottom-6 right-6 w-10 h-10 border border-accent-blue rounded-lg transform -rotate-12"></div>
-          </div>
-
-          {/* Hexagonal Tech Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <svg className="w-full h-full" viewBox="0 0 100 100">
-              <defs>
-                <pattern id={`hexagon-${project.id}`} x="0" y="0" width="15" height="13" patternUnits="userSpaceOnUse">
-                  <polygon
-                    points="7.5,0 12.5,6.5 7.5,13 2.5,6.5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.3"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100" height="100" fill={`url(#hexagon-${project.id})`} className="text-accent-blue" />
-            </svg>
-          </div>
-
-          {/* Circuit Board Lines */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-accent-blue to-transparent opacity-30"></div>
-            <div className="absolute bottom-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-accent-blue to-transparent opacity-20"></div>
-            <div className="absolute top-0 left-1/3 w-0.5 h-full bg-gradient-to-b from-transparent via-accent-blue to-transparent opacity-25"></div>
-          </div>
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent"></div>
-        </div>
-
         {/* Content Section */}
-        <CardContent className="flex-1 flex flex-col bg-white p-4">
+        <CardContent className="flex-1 flex flex-col p-4">
           <div className="flex-1">
             <div className="flex items-start gap-3 mb-2">
               {project.icon && (

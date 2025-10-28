@@ -2,9 +2,57 @@ import { Project } from '@/components/projects/ProjectCard'
 
 export const projects: Project[] = [
   {
+    id: 'fuel-pump-anomaly-detection',
+    title: '$3.9M Projected Annual Savings: Industrial Anomaly Detection',
+    description: 'Production-grade multi-model ensemble ML system combining LSTM Autoencoder, Isolation Forest, and Transformer models. Achieved 96% F1-score with 33% reduction in false positives, projecting $3.9M annual savings through 97% recall and reduced maintenance costs for fuel blending facility.',
+    longDescription: `A sophisticated machine learning pipeline for detecting anomalies in fuel pump systems at an Atlanta fuel blending facility, combining three complementary models using hybrid ensemble approach with stacking meta-learner deployed on Google Cloud Platform.
+
+    Architected multi-model ensemble combining LSTM Autoencoder for temporal sequence anomalies (89% F1), Isolation Forest for statistical outliers (94% F1), and Transformer for complex multi-sensor correlations. Implemented hybrid ensemble with weighted averaging and stacking meta-learner (Logistic Regression) achieving 96% F1-score, reducing false positives by 33% compared to single-model baselines.
+
+    Built comprehensive MLOps infrastructure on GCP with Vertex AI for experiment tracking, model monitoring, and automated deployment pipelines. Features BigQuery ML integration for in-database inference, Cloud Storage model registry with semantic versioning, and SHAP-based explainability for root cause analysis. Engineered time-series preprocessing with rolling statistics (5min, 30min, 1hr windows), lag features, and sequence windowing. System monitors 12 critical sensors (pressure, temperature, vibration, flow rate, RPM) with projected $3.9M annual savings through 97% recall and reduced maintenance costs.`,
+    icon: '/iot-sensor.svg',
+    category: 'machine-learning',
+    technologies: ['Python', 'TensorFlow', 'LSTM', 'Transformer', 'Isolation Forest', 'Vertex AI', 'BigQuery ML', 'GCP', 'SHAP', 'scikit-learn', 'MLOps', 'Stacking Ensemble'],
+    metrics: {
+      hours: '320+ Hours',
+      models: '3-Model Ensemble',
+      datasets: '12 Sensors @ 50K+ Readings'
+    },
+    links: {
+      github: 'https://github.com/yourusername/fuel-pump-anomaly-detection'
+    },
+    featured: true,
+    status: 'completed',
+    completedDate: '2025-10-15'
+  },
+  {
+    id: 'pump-power-consumption-analysis',
+    title: 'Pump Power Consumption Analysis',
+    description: 'AI-powered analysis platform for pump power consumption efficiency with natural language querying, automated data validation, and intelligent recommendations for operational optimization.',
+    longDescription: `An interactive AI-powered analysis platform built to analyze pump power consumption data across multiple pipeline locations and operational conditions.
+
+    The system features a natural language query interface allowing operators to request specific data ranges, locations, and sensor metrics without writing SQL. Implements automated data validation workflows with configurable rules for flowrates, temperature, pressure, and power consumption limits across different stations and pipeline segments.
+
+    Built comprehensive analytics layer with AI-powered insights providing operational recommendations based on historical patterns and current conditions. Features interactive dashboards with Chart.js visualizations, automated report generation, and data export capabilities for stakeholder communication. The platform enables non-technical users to access and analyze complex sensor data through an intuitive conversational interface.`,
+    icon: '/iot-sensor.svg',
+    category: 'ai-automation',
+    technologies: ['JavaScript', 'Chart.js', 'AI/LLM', 'Data Validation', 'Analytics', 'Natural Language Processing', 'HTML/CSS'],
+    metrics: {
+      hours: '120+ Hours',
+      projects: 'Interactive Analytics',
+      datasets: 'Multi-location Sensor Data'
+    },
+    links: {
+      live: '/power_consumption.html'
+    },
+    featured: true,
+    status: 'completed',
+    completedDate: '2024-10-20'
+  },
+  {
     id: 'industrial-iot-sensor-intelligence',
-    title: 'Industrial IoT Sensor Intelligence Platform',
-    description: 'Intelligent sensor data transformation system processing 50,000+ daily readings, converting sparse exception-driven streams into continuous time-series datasets with 99.2% anomaly detection accuracy.',
+    title: '50,000+ Daily Readings: Industrial IoT Sensor Intelligence',
+    description: 'Intelligent sensor data transformation system processing 50,000+ daily readings, converting sparse exception-driven streams into continuous time-series datasets with 99.2% anomaly detection accuracy. Reduced false positive alerts by 65% while serving 15+ downstream analytics applications.',
     longDescription: `An intelligent transformation system built for Colonial Pipeline that processes industrial IoT sensor data at massive scale, converting exception-driven sensor streams into actionable continuous datasets for pipeline operations.
 
     The system implements statistical interpolation models and ARIMA-based gap-filling algorithms to create continuous time-series from sparse sensor data. Features isolation forests and Z-score analysis for automated outlier detection with business-context-aware thresholds that reduced false positive alerts by 65%.
@@ -27,8 +75,8 @@ export const projects: Project[] = [
   },
   {
     id: 'multi-agent-dra-optimization',
-    title: 'Multi-Agent AI System for Pipeline Optimization',
-    description: 'Production multi-agent LLM architecture orchestrating specialized AI agents for drag-reducing agent optimization, delivering $200K+ annual energy savings through natural language interface.',
+    title: '$200K+ Annual Savings: Multi-Agent AI for Pipeline Optimization',
+    description: 'Production multi-agent LLM architecture orchestrating specialized AI agents for drag-reducing agent optimization. Delivered $200K+ annual energy savings through natural language interface enabling non-technical users to optimize complex industrial operations.',
     longDescription: `A sophisticated multi-agent system deployed at Colonial Pipeline that orchestrates specialized expert agents to optimize drag-reducing agent (DRA) injection across pipeline operations.
 
     The architecture combines LangChain-powered statistical analysis agents, domain-specific blending operations expertise, and GPT-4 as the foundational reasoning engine. Implements RAG architecture with Vertex AI Vector Search for querying historical performance data and technical documentation.
@@ -99,8 +147,8 @@ export const projects: Project[] = [
   },
   {
     id: 'enterprise-demand-forecasting',
-    title: 'Enterprise Demand Forecasting System',
-    description: 'Production forecasting system processing 50,000+ SKUs daily with ensemble LSTM/XGBoost/Prophet models, delivering $1M projected annual savings through 40% stockout reduction.',
+    title: '$1M Projected Annual Savings: Enterprise Demand Forecasting',
+    description: 'Production forecasting system processing 50,000+ SKUs daily with ensemble LSTM/XGBoost/Prophet models. Delivered $1M projected annual savings through 40% stockout reduction and 25% excess inventory reduction, outperforming O9 Solutions baseline by 4% MAPE.',
     longDescription: `A comprehensive demand forecasting platform built at Gordon Food Service that combines neural networks with traditional time series methods for enterprise-scale predictions.
 
     Transformed experimental TensorFlow LSTM notebook into production system with custom architecture combining LSTM networks for temporal patterns, XGBoost for hierarchical feature importance, and residual connections with attention mechanisms achieving 12% accuracy improvement over baseline.
@@ -123,8 +171,8 @@ export const projects: Project[] = [
   },
   {
     id: 'bigquery-cost-optimization',
-    title: 'BigQuery Cost Optimization Framework',
-    description: 'Strategic data architecture improvements reducing BigQuery costs by $12K monthly through partitioning, clustering, and intelligent slot management on ML workloads.',
+    title: '$12K Monthly Savings: BigQuery Cost Optimization Framework',
+    description: 'Strategic data architecture improvements reducing BigQuery costs by 10% ($12K monthly) through partitioning, clustering, and intelligent slot management on ML workloads. Enhanced model training efficiency by 25% while enabling data mesh principles across 8 domain teams.',
     longDescription: `A comprehensive cost optimization initiative at Gordon Food Service that reduced BigQuery spend by 10% ($12K monthly) through architectural improvements and query optimization strategies.
 
     Implemented date-based partitioning on 20+ core data science tables, multi-column clustering on high-cardinality dimensions, and slot reservation analysis identifying off-peak training opportunities. Enhanced model training efficiency by 25% through incremental feature computation, materialized feature stores with automated refresh schedules, and data access pattern optimization reducing network I/O by 60%.
@@ -243,8 +291,8 @@ export const projects: Project[] = [
   },
   {
     id: 'ai-procurement-automation',
-    title: 'AI-Powered Procurement Automation System',
-    description: 'Google ADK agent system for intelligent vendor evaluation with automated SWOT analysis and technology stack alignment, delivering $150K+ annual savings.',
+    title: '$150K+ Annual Savings: AI-Powered Procurement Automation',
+    description: 'Google ADK agent system for intelligent vendor evaluation with automated SWOT analysis and technology stack alignment. Delivered $150K+ annual savings through optimized vendor selection, reducing evaluation time from weeks to days while improving decision quality.',
     longDescription: `An intelligent procurement automation platform built at Colonial Pipeline using Google ADK agents to evaluate vendor proposals and optimize selection decisions.
 
     Implemented multi-criteria analysis assessing technical fit, cost, security compliance, and integration effort. Features automated SWOT analysis generation, technology stack compatibility assessment against organizational standards, and cost-benefit analysis with AI-generated market intelligence.

@@ -1,13 +1,19 @@
 import Hero from '@/components/home/Hero'
-import FeaturedProjects from '@/components/home/FeaturedProjects'
-import Skills from '@/components/home/Skills'
+import Capabilities from '@/components/home/Capabilities'
+import BattleTestedStack from '@/components/home/BattleTestedStack'
+import InnovationLab from '@/components/home/InnovationLab'
+import ProjectShowcase from '@/components/home/ProjectShowcase'
+import CTAHub from '@/components/home/CTAHub'
 
 export default function Home() {
   return (
     <div className="pt-16">
       <Hero />
-      <FeaturedProjects />
-      <Skills />
+      <Capabilities />
+      <BattleTestedStack />
+      <InnovationLab />
+      <ProjectShowcase />
+      <CTAHub />
     </div>
   )
 }

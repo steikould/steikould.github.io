@@ -1,6 +1,7 @@
 import Timeline from '@/components/about/Timeline'
 import SkillsList from '@/components/about/SkillsList'
 import Hero from '@/components/about/Hero'
+import Certifications from '@/components/about/Certifications'
 
 export const metadata = {
   title: 'About | Professional Portfolio',
@@ -14,6 +15,7 @@ export default function AboutPage() {
       <div className="bg-primary-light">
         <Timeline />
         <SkillsList />
+        <Certifications />
       </div>
     </div>
   )

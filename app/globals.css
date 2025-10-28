@@ -3,49 +3,110 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #b0b0b0;
+  background-color: #0a0e1a;
 }
 
 @layer base {
   * {
-    @apply border-gray-200;
+    @apply border-gray-800/50;
   }
 
-  body {
-    @apply bg-primary-light text-text-dark;
+  h1 {
+    @apply text-headline md:text-headline-mobile text-text-light;
+  }
+
+  h2 {
+    @apply text-section-heading md:text-section-heading-mobile text-text-light;
+  }
+
+  h3 {
+    @apply text-card-title text-text-light;
+  }
+
+  p {
+    @apply text-body md:text-body-mobile text-text-gray;
+  }
+
+  a {
+    @apply transition-colors duration-normal;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-accent-blue text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-600 transition-all duration-300 transform hover:scale-105;
+    @apply bg-accent-blue text-white px-6 py-3 rounded-md text-button
+           hover:bg-accent-blue-hover transition-all duration-normal
+           transform hover:scale-105 hover:-translate-y-0.5
+           shadow-button hover:shadow-card-hover;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-accent-blue text-accent-blue px-6 py-3 rounded-xl font-medium hover:bg-accent-blue hover:text-white transition-all duration-300;
+    @apply bg-transparent border-2 border-accent-blue text-accent-blue px-6 py-3 rounded-md text-button
+           hover:bg-accent-blue hover:text-white transition-all duration-normal
+           transform hover:scale-105;
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+    @apply bg-primary-dark-secondary rounded-md shadow-card
+           hover:shadow-card-hover transition-all duration-normal
+           transform hover:-translate-y-1 hover:scale-[1.03]
+           border border-gray-800/50 hover:border-accent-blue/50;
   }
 
   .section-padding {
-    @apply py-24 px-8 lg:px-16;
+    @apply py-20 px-6 lg:px-16;
   }
 
   .container-max {
     @apply max-w-7xl mx-auto;
+  }
+
+  /* Typography utilities */
+  .eyebrow {
+    @apply text-eyebrow text-accent-blue uppercase tracking-wider;
+  }
+
+  .metric-number {
+    @apply text-metric-number md:text-metric-number-mobile text-accent-blue font-bold;
+  }
+
+  .metric-label {
+    @apply text-metric-label text-text-gray;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Focus states for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2 focus:ring-offset-primary-dark;
+  }
+
+  /* Animation utilities */
+  .transition-fast {
+    transition-duration: 150ms;
+  }
+
+  .transition-normal {
+    transition-duration: 300ms;
+  }
+
+  .transition-slow {
+    transition-duration: 500ms;
   }
 }

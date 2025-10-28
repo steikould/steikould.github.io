@@ -2,102 +2,114 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import {
-  ChevronDown,
   Menu,
   X,
-  Code,
-  Cpu,
-  Zap,
-  Database,
-  Briefcase,
-  FileText
+  FileText,
+  Mail,
+  Github
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { personalInfo } from '@/lib/personal-info'
 
-const categories = [
-  { name: 'Data Engineering', icon: Database, href: '/projects?category=data-engineering' },
-  { name: 'Machine Learning', icon: Cpu, href: '/projects?category=machine-learning' },
-  { name: 'AI & Automation', icon: Zap, href: '/projects?category=ai-automation' },
-  { name: 'Full Stack', icon: Code, href: '/projects?category=full-stack' },
-  { name: 'Career', icon: Briefcase, href: '/blog?category=career' },
-  { name: 'Technical', icon: FileText, href: '/blog?category=technical' },
+// Primary navigation pages
+const primaryPages = [
+  // { name: 'Projects', href: '/projects' }, // Disabled - Coming Soon
+  // { name: 'Blog', href: '/blog' }, // Disabled - Coming Soon
+  { name: 'About', href: '/about' },
+]
+
+// Utility links (right side)
+const utilityLinks = [
+  { name: 'Resume', icon: FileText, href: '/MCoursyResume.pdf', download: true },
+  { name: 'GitHub', icon: Github, href: personalInfo.social.github },
 ]
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isCategoriesOpen, setIsCategoriesOpen] = useState(false)
   const pathname = usePathname()
-
-  const navItems = [
-    { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
-  ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary-dark/95 backdrop-blur-sm border-b border-gray-800">
-      <div className="container-max">
-        <div className="flex items-center justify-between h-16 px-6">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white hover:text-accent-blue transition-colors">
-            Max Coursey
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center justify-between h-16 px-4">
+          {/* Left: Logo with Profile Photo */}
+          <Link href="/about" className="flex items-center gap-3 group">
+            {/* Profile Photo */}
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-blue to-purple-500 rounded-full blur-sm opacity-60 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative">
+                <Image
+                  src="/images/headshot.jpg"
+                  alt="Max Coursey"
+                  width={40}
+                  height={40}
+                  className="rounded-full border border-accent-blue/50 object-cover"
+                  priority
+                />
+              </div>
+            </div>
+            {/* Name */}
+            <span className="text-xl font-bold text-white group-hover:text-accent-blue transition-colors">
+              Max Coursey
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Center: Primary Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Categories Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
-                className="flex items-center space-x-1 text-white hover:text-accent-blue transition-colors"
-              >
-                <span>Categories</span>
-                <ChevronDown className={cn(
-                  "w-4 h-4 transition-transform duration-200",
-                  isCategoriesOpen && "rotate-180"
-                )} />
-              </button>
-
-              {/* Dropdown Menu */}
-              {isCategoriesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-primary-light rounded-2xl shadow-xl border border-gray-200 animate-slide-down">
-                  <div className="p-4">
-                    <div className="grid grid-cols-2 gap-2">
-                      {categories.map((category) => {
-                        const Icon = category.icon
-                        return (
-                          <Link
-                            key={category.name}
-                            href={category.href}
-                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-accent-blue-light transition-colors group"
-                            onClick={() => setIsCategoriesOpen(false)}
-                          >
-                            <Icon className="w-5 h-5 text-accent-blue group-hover:text-accent-blue" />
-                            <span className="text-sm font-medium text-text-dark">{category.name}</span>
-                          </Link>
-                        )
-                      })}
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Regular Navigation Items */}
-            {navItems.map((item) => (
+            {primaryPages.map((page) => (
               <Link
-                key={item.name}
-                href={item.href}
+                key={page.name}
+                href={page.href}
                 className={cn(
-                  "text-white hover:text-accent-blue transition-colors",
-                  pathname === item.href && "text-accent-blue"
+                  "text-base font-medium transition-colors",
+                  pathname === page.href
+                    ? "text-accent-blue"
+                    : "text-white hover:text-accent-blue"
                 )}
               >
-                {item.name}
+                {page.name}
               </Link>
             ))}
+          </div>
+
+          {/* Right: Utility Links */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Available Status Badge */}
+            <div className="relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-dark-secondary border border-accent-success/30">
+              <div className="relative">
+                <div className="absolute inset-0 bg-accent-success rounded-full animate-ping opacity-75" />
+                <div className="w-2 h-2 bg-accent-success rounded-full relative z-10" />
+              </div>
+              <span className="text-xs text-accent-success font-medium">Available Q2 2026</span>
+            </div>
+
+            {/* Contact Button */}
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="text-white hover:text-accent-blue transition-colors p-2 rounded-lg hover:bg-primary-dark-secondary"
+              title="Contact"
+            >
+              <Mail className="w-5 h-5" />
+            </a>
+
+            {utilityLinks.map((link) => {
+              const Icon = link.icon
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-white hover:text-accent-blue transition-colors p-2 rounded-lg hover:bg-primary-dark-secondary"
+                  title={link.name}
+                  {...(link.download && { download: true })}
+                  {...(!link.download && { target: '_blank', rel: 'noopener noreferrer' })}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              )
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -113,51 +125,73 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden bg-primary-dark border-t border-gray-800 animate-slide-down">
             <div className="px-6 py-4 space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={cn(
-                    "block text-white hover:text-accent-blue transition-colors",
-                    pathname === item.href && "text-accent-blue"
-                  )}
+              {/* Primary Pages */}
+              <div className="space-y-2">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2">Pages</p>
+                {primaryPages.map((page) => (
+                  <Link
+                    key={page.name}
+                    href={page.href}
+                    className={cn(
+                      "block text-base font-medium transition-colors py-2",
+                      pathname === page.href
+                        ? "text-accent-blue"
+                        : "text-white hover:text-accent-blue"
+                    )}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {page.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Divider */}
+              <div className="border-t border-gray-800"></div>
+
+              {/* Utility Links */}
+              <div className="space-y-2">
+                <p className="text-xs text-text-muted uppercase tracking-wider mb-2">Quick Links</p>
+
+                {/* Available Status Badge */}
+                <div className="relative flex items-center gap-2 px-3 py-2 rounded-full bg-primary-dark-secondary border border-accent-success/30 w-fit">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-accent-success rounded-full animate-ping opacity-75" />
+                    <div className="w-2 h-2 bg-accent-success rounded-full relative z-10" />
+                  </div>
+                  <span className="text-xs text-accent-success font-medium">Available Q2 2026</span>
+                </div>
+
+                {/* Contact Button */}
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="flex items-center gap-3 px-4 py-2 rounded-lg bg-accent-blue hover:bg-accent-blue/80 text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.name}
-                </Link>
-              ))}
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">Contact</span>
+                </a>
 
-              <div className="pt-4 border-t border-gray-800">
-                <p className="text-sm font-medium text-gray-400 mb-3">Categories</p>
-                <div className="space-y-2">
-                  {categories.map((category) => {
-                    const Icon = category.icon
-                    return (
-                      <Link
-                        key={category.name}
-                        href={category.href}
-                        className="flex items-center space-x-3 text-white hover:text-accent-blue transition-colors"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        <Icon className="w-4 h-4" />
-                        <span className="text-sm">{category.name}</span>
-                      </Link>
-                    )
-                  })}
-                </div>
+                {utilityLinks.map((link) => {
+                  const Icon = link.icon
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      className="flex items-center gap-3 text-white hover:text-accent-blue transition-colors py-2"
+                      onClick={() => setIsMenuOpen(false)}
+                      {...(link.download && { download: true })}
+                      {...(!link.download && { target: '_blank', rel: 'noopener noreferrer' })}
+                    >
+                      <Icon className="w-4 h-4" />
+                      <span className="text-sm">{link.name}</span>
+                    </a>
+                  )
+                })}
               </div>
             </div>
           </div>
         )}
       </div>
-
-      {/* Click Outside to Close Dropdown */}
-      {isCategoriesOpen && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setIsCategoriesOpen(false)}
-        />
-      )}
     </nav>
   )
 }

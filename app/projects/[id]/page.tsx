@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Github, ExternalLink, Calendar, Clock } from 'lucide-react'
-import { getProjectById } from '@/lib/projects'
+import { getProjectById, projects } from '@/lib/projects'
 import Badge from '@/components/ui/Badge'
 import Button from '@/components/ui/Button'
 import Card, { CardContent } from '@/components/ui/Card'
@@ -9,6 +9,12 @@ import { formatDate } from '@/lib/utils'
 
 interface ProjectDetailPageProps {
   params: { id: string }
+}
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }))
 }
 
 export async function generateMetadata({ params }: ProjectDetailPageProps) {

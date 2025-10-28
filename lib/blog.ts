@@ -1,6 +1,34 @@
 import { BlogPost } from '@/components/blog/BlogCard'
 
-export const blogPosts: BlogPost[] = [
+// Server-side only imports
+function loadMarkdownPosts(): BlogPost[] {
+  if (typeof window !== 'undefined') {
+    return []
+  }
+  try {
+    const { loadBlogPostsFromMarkdown } = require('./blog-server')
+    return loadBlogPostsFromMarkdown()
+  } catch (error) {
+    console.error('Error loading markdown posts:', error)
+    return []
+  }
+}
+
+function getMarkdownPost(id: string): BlogPost | null {
+  if (typeof window !== 'undefined') {
+    return null
+  }
+  try {
+    const { getBlogPostFromMarkdown } = require('./blog-server')
+    return getBlogPostFromMarkdown(id)
+  } catch (error) {
+    console.error('Error loading markdown post:', error)
+    return null
+  }
+}
+
+// Static blog posts (kept for backward compatibility or manual overrides)
+const staticBlogPosts: BlogPost[] = [
   {
     id: 'industrial-iot-sensor-intelligence',
     title: 'Building an Intelligent IoT Sensor Data Transformation System for Pipeline Operations',
@@ -280,21 +308,54 @@ export const blogPosts: BlogPost[] = [
   }
 ]
 
+// Load blog posts from markdown files and merge with static posts
+let cachedBlogPosts: BlogPost[] | null = null
+
+function getAllBlogPosts(): BlogPost[] {
+  if (cachedBlogPosts) {
+    return cachedBlogPosts
+  }
+
+  // Load posts from markdown files
+  const markdownPosts = loadMarkdownPosts()
+
+  // Merge with static posts, prioritizing markdown posts by ID
+  const markdownIds = new Set(markdownPosts.map(p => p.id))
+  const staticPostsFiltered = staticBlogPosts.filter(p => !markdownIds.has(p.id))
+
+  cachedBlogPosts = [...markdownPosts, ...staticPostsFiltered]
+    .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
+
+  return cachedBlogPosts
+}
+
+export const blogPosts = getAllBlogPosts()
+
 export const getBlogPostsByCategory = (category?: string): BlogPost[] => {
-  if (!category) return blogPosts
-  return blogPosts.filter(post => post.category === category)
+  const posts = getAllBlogPosts()
+  if (!category) return posts
+  return posts.filter(post => post.category === category)
 }
 
 export const getFeaturedPosts = (): BlogPost[] => {
-  return blogPosts.filter(post => post.featured)
+  const posts = getAllBlogPosts()
+  return posts.filter(post => post.featured)
 }
 
 export const getBlogPostById = (id: string): BlogPost | undefined => {
-  return blogPosts.find(post => post.id === id)
+  // Try to load from markdown first
+  const markdownPost = getMarkdownPost(id)
+  if (markdownPost) {
+    return markdownPost
+  }
+
+  // Fall back to static posts
+  return staticBlogPosts.find(post => post.id === id)
 }
 
 export const getRecentPosts = (limit: number = 3): BlogPost[] => {
-  return blogPosts
+  const posts = getAllBlogPosts()
+  return posts
     .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
     .slice(0, limit)
 }

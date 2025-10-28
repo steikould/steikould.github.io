@@ -1,0 +1,296 @@
+═══════════════════════════════════════════════════════════════════════════════
+                     PORTFOLIO WEBSITE - NEW STRUCTURE
+═══════════════════════════════════════════════════════════════════════════════
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                           📍 SECTION 1: HERO                              ┃
+┃                        components/home/Hero.tsx                           ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                                                                   ║
+    ║   [Headshot]     Max Coursey                                      ║
+    ║   with glow      MLOps & Enterprise AI Leader                     ║
+    ║                  Specializing in Industrial IoT                   ║
+    ║                  ● Available for Select Consulting [PULSE]        ║
+    ║                                                                   ║
+    ║   ┌─────────────────────────────────────────────────────────┐   ║
+    ║   │  Building Intelligent Data Solutions                     │   ║
+    ║   │  for Tomorrow's Challenges                              │   ║
+    ║   └─────────────────────────────────────────────────────────┘   ║
+    ║                                                                   ║
+    ║   "I design scalable data infrastructure and ML pipelines         ║
+    ║   that turn complex industrial challenges into measurable         ║
+    ║   business outcomes."                                             ║
+    ║                                                                   ║
+    ║   [View My Work] [Download Resume] [Power Analysis Demo]         ║
+    ║                                                                   ║
+    ║   ┌─────┬─────┬─────┬─────┐                                      ║
+    ║   │ 15+ │ 50+ │ 10+ │ 3+  │  Industry Statistics                 ║
+    ║   │ IoT │ ML  │Tech │Years│                                      ║
+    ║   └─────┴─────┴─────┴─────┘                                      ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+
+                                    ⬇️
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                  🛠️  SECTION 2: BATTLE-TESTED TECH STACK                 ┃
+┃                   components/home/BattleTestedStack.tsx                  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+    Enterprise-grade tools delivering measurable ROI
+
+    ┌────────────┬────────────┬────────────┬────────────┐
+    │   [Icon]   │   [Icon]   │   [Icon]   │   [Icon]   │
+    │    GCP     │   Python   │ TensorFlow │ Kubernetes │
+    │            │            │            │            │
+    │  [HOVER]   │  [HOVER]   │  [HOVER]   │  [HOVER]   │
+    │ ┌────────┐ │ ┌────────┐ │ ┌────────┐ │ ┌────────┐ │
+    │ │Why It  │ │ │50+ prod│ │ │12+ ML  │ │ │Zero    │ │
+    │ │Works:  │ │ │scripts │ │ │models  │ │ │downtime│ │
+    │ │Enterprise│ │80% work │ │94% acc  │ │8 envs   │ │
+    │ │scale...│ │ │reduction│ │         │ │         │ │
+    │ └────────┘ │ └────────┘ │ └────────┘ │ └────────┘ │
+    └────────────┴────────────┴────────────┴────────────┘
+
+    ┌────────────┬────────────┬────────────┬────────────┐
+    │   [Icon]   │   [Icon]   │   [Icon]   │   [Icon]   │
+    │   Beam/    │  MLflow/   │ Terraform  │  BigQuery  │
+    │  Dataflow  │    W&B     │            │            │
+    └────────────┴────────────┴────────────┴────────────┘
+
+                  Each card EXPANDS on hover to show:
+                  • Why It Works
+                  • Real Impact (metrics)
+                  • Key Projects (links)
+
+                                    ⬇️
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                   🔬 SECTION 3: INNOVATION LAB                            ┃
+┃                    components/home/InnovationLab.tsx                     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+    What's Next: AI concepts in development for industrial intelligence
+
+    ┌─────────────────────┬─────────────────────┬─────────────────────┐
+    │  [Icon]             │  [Icon]             │  [Icon]             │
+    │  Operational        │  Enterprise         │  Edge Intelligence  │
+    │  Knowledge Asst.    │  Feature Store      │  Deployment         │
+    │                     │                     │                     │
+    │  Natural language   │  Centralized repo   │  On-device ML at    │
+    │  for pipeline ops   │  for ML features    │  edge stations      │
+    │                     │                     │                     │
+    │  ⚙️ In Development  │  🔬 Research Phase  │  🧪 Beta Testing    │
+    │                     │                     │                     │
+    │  LangChain │ RAG    │  Feast │ BigQuery   │  TFLite │ Edge TPU │
+    │  Vertex AI │ ...    │  Dataflow │ GCS     │  KubeEdge │ MQTT   │
+    │                     │                     │                     │
+    │  Impact: 40% faster │  Impact: 60% less   │  Impact: Real-time  │
+    │  troubleshooting    │  feature eng time   │  <100ms decisions   │
+    └─────────────────────┴─────────────────────┴─────────────────────┘
+
+    ┌─────────────────────┬─────────────────────┬─────────────────────┐
+    │  Semantic Log &     │  Data Lake Version  │  Autonomous Health  │
+    │  Sensor Search      │  Control            │  Monitor            │
+    │  ⚙️ In Development  │  🔬 Research Phase  │  🚀 Launching Soon  │
+    └─────────────────────┴─────────────────────┴─────────────────────┘
+
+                                    ⬇️
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                     📊 SECTION 4: PROJECT SHOWCASE                        ┃
+┃                   components/home/ProjectShowcase.tsx                    ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+    Real-world systems driving business outcomes
+
+    ╔═══════════════════════════════════════════════════════════════════╗
+    ║                        ⭐ FEATURED PROJECT                         ║
+    ║  ┌───────────────────┐  ┌──────────────────────────────────────┐ ║
+    ║  │                   │  │  Power Analysis Demo                  │ ║
+    ║  │  [Screenshot      │  │  Interactive fuel consumption optimizer│ ║
+    ║  │   Preview with    │  │                                        │ ║
+    ║  │   Try Demo        │  │  AI-powered analysis platform...       │ ║
+    ║  │   overlay]        │  │                                        │ ║
+    ║  │                   │  │  ✓ Real-time efficiency calculations   │ ║
+    ║  │                   │  │  ✓ Predictive maintenance              │ ║
+    ║  │                   │  │  ✓ $2.4M annual savings potential      │ ║
+    ║  │                   │  │                                        │ ║
+    ║  └───────────────────┘  │  [🎯 Try Live Demo] [📄 View Case]     │ ║
+    ║                         └──────────────────────────────────────┘ ║
+    ╚═══════════════════════════════════════════════════════════════════╝
+
+    ┌─────────────────────────────────┬─────────────────────────────────┐
+    │  Dataplex Discovery System      │  IoT Pipeline Router            │
+    │  Metadata-driven routing...     │  Enterprise sensor data...      │
+    │                                 │                                 │
+    │  ✓ Automated cataloging         │  ✓ Real-time ingestion          │
+    │  ✓ Governance policies          │  ✓ Quality checks               │
+    │  ✓ Lineage tracking             │  ✓ Multi-destination routing    │
+    │  ✓ 75% faster discovery         │  ✓ 5M+ events/day, 99.9% up     │
+    │                                 │                                 │
+    │  [📄 View Case Study]           │  [📄 View Case Study]           │
+    └─────────────────────────────────┴─────────────────────────────────┘
+
+                        [View All Projects →]
+
+                                    ⬇️
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                         🎯 SECTION 5: CTA HUB                             ┃
+┃                       components/home/CTAHub.tsx                         ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+    Ready to Connect? Let's turn data challenges into opportunities
+
+    ┌──────────────────────┬──────────────────────┬──────────────────────┐
+    │  [Folder Icon]       │  [Download Icon]     │  [Mail Icon]         │
+    │  View Projects       │  Download Resume     │  Get In Touch        │
+    │                      │                      │                      │
+    │  Explore my          │  Full technical      │  Available for       │
+    │  portfolio of        │  background &        │  select consulting   │
+    │  deployed systems    │  achievements        │  projects            │
+    │                      │                      │                      │
+    │                      │  📥 PDF (2 pages)    │                      │
+    │                      │                      │                      │
+    │  [Browse →]          │  [Download →]        │  [Let's Talk →]      │
+    └──────────────────────┴──────────────────────┴──────────────────────┘
+
+    ● Available for select consulting projects starting Q2 2025
+
+    ┌─────────────────────────────────────────────────────────────────────┐
+    │                        SOCIAL PROOF STATS                           │
+    │                                                                     │
+    │   ┌──────────┬──────────┬──────────┬──────────┐                   │
+    │   │  $5M+    │   15+    │  10M+    │  99.9%   │                   │
+    │   │  Annual  │Production│  Events  │  System  │                   │
+    │   │  Savings │   ML     │Processed │ Reliabil.│                   │
+    │   │ Delivered│ Systems  │  Daily   │          │                   │
+    │   └──────────┴──────────┴──────────┴──────────┘                   │
+    └─────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                           📱 RESPONSIVE BEHAVIOR
+
+Desktop (1024px+):     Tablet (768-1023px):    Mobile (<768px):
+┌─┬─┬─┬─┐              ┌─┬─┬─┐                 ┌───┐
+│ │ │ │ │ Battle       │ │ │ │ Battle          │   │ Battle
+└─┴─┴─┴─┘              └─┴─┴─┘                 │   │
+┌─┬─┬─┐                ┌─┬─┐                   └───┘
+│ │ │ │ Innovation     │ │ │ Innovation        ┌───┐
+└─┴─┴─┘                └─┴─┘                   │   │ Innovation
+┌───┬─┐                ┌─┬─┐                   └───┘
+│[*]│ │ Projects       │ │ │ Projects          ┌───┐
+└───┴─┘                └─┴─┘                   │   │ Projects
+┌─┬─┬─┐                ┌─┬─┬─┐                 └───┘
+│ │ │ │ CTA            │ │ │ │ CTA             ┌───┐
+└─┴─┴─┘                └─┴─┴─┘                 │   │ CTA
+                                                └───┘
+
+[*] Featured project spans 2 columns on desktop
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                          🎨 INTERACTION PATTERNS
+
+Base State:                 Hover State:              Click:
+┌──────────┐                ┌──────────┐              Navigate to:
+│  [Icon]  │    →hover→     │  [Icon]  │   →click→    • Project page
+│  Name    │                │  Name    │              • Demo
+│          │                │ ┌──────┐ │              • Download
+└──────────┘                │ │ Why  │ │              • Email
+                            │ │Impact│ │
+                            │ │Links │ │
+                            └─┴──────┴─┘
+                            Scale: 1.05x
+                            Shadow: ↑
+                            Glow effect
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                           🎬 ANIMATION SEQUENCE
+
+Page Load Timeline:
+0ms    ━━━ Hero name/image fade in
+100ms  ━━━ Hero headline slide up
+300ms  ━━━ Availability pulse starts
+600ms  ━━━ CTA buttons appear
+800ms  ━━━ Stats counter animation
+
+Scroll Timeline:
+User scrolls ↓
+━━━ Battle-Tested Stack cards fade in (staggered 50ms each)
+━━━ Innovation Lab cards fade in (staggered 100ms each)
+━━━ Projects appear with slide-up
+━━━ CTA Hub fades in with stats
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                             📁 FILE STRUCTURE
+
+app/
+├── page.tsx ........................... Main page (imports all sections)
+├── globals.css ........................ Global styles + scroll utilities
+└── layout.tsx ......................... Root layout
+
+components/
+├── home/
+│   ├── Hero.tsx ....................... Section 1: Hero (enhanced)
+│   ├── BattleTestedStack.tsx .......... Section 2: Tech Stack (NEW)
+│   ├── InnovationLab.tsx .............. Section 3: Innovation (NEW)
+│   ├── ProjectShowcase.tsx ............ Section 4: Projects (NEW)
+│   └── CTAHub.tsx ..................... Section 5: CTA Hub (NEW)
+└── ui/
+    └── Button.tsx ..................... Reusable button component
+
+lib/
+├── projects.ts ........................ Project data (existing)
+├── personal-info.ts ................... Personal data (existing)
+└── utils/
+    └── scroll.ts ...................... Scroll utilities (NEW)
+
+public/
+└── images/
+    ├── headshot.jpg ................... ⚠️ ADD THIS
+    └── pump_excel_graph.png ........... ⚠️ ADD THIS
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                             ✅ DEPLOYMENT STEPS
+
+1. Add Missing Images:
+   [ ] /public/images/headshot.jpg
+   [ ] /public/images/pump_excel_graph.png
+
+2. Test Locally:
+   $ npm run dev
+   Visit http://localhost:3000
+
+3. Verify:
+   [ ] All sections render
+   [ ] Hover effects work
+   [ ] Links are correct
+   [ ] Mobile responsive
+   [ ] Images load
+
+4. Build & Deploy:
+   $ npm run build
+   $ npm run start
+
+═══════════════════════════════════════════════════════════════════════════════
+
+                           🎉 CONGRATULATIONS!
+
+Your portfolio now has:
+✓ Cohesive story-driven flow
+✓ Interactive, expandable tech cards
+✓ Clear innovation roadmap with status tracking
+✓ Prominent project showcase with live demos
+✓ Professional CTA hub with social proof
+✓ Smooth animations throughout
+✓ Fully responsive design
+✓ Production-ready code
+
+═══════════════════════════════════════════════════════════════════════════════

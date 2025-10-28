@@ -7,7 +7,16 @@
       "Bash(npm run dev:*)",
       "Bash(for i in {2..8})",
       "Bash(do cp headshot.jpg \"photo-$i.jpg\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(npm install:*)",
+      "Bash(python fix_frontmatter.py:*)",
+      "Bash(start public/fuel-pump-architecture.html)",
+      "Bash(timeout /t 5)",
+      "Bash(timeout:*)",
+      "Bash(dir \"C:\\Users\\mxmco\\SteiKould\\steikould.github.io\")",
+      "Bash(findstr:*)",
+      "Bash(git log:*)",
+      "Bash(dir /b)"
     ],
     "deny": [],
     "ask": []
