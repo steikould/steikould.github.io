@@ -59,7 +59,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-accent-blue rounded-full animate-ping opacity-75" />
                 <div className="w-2 h-2 bg-accent-blue rounded-full relative z-10" />
               </div>
-              <span className="text-lg font-semibold text-white">Full Portfolio Coming Soon</span>
+              <span className="text-lg font-semibold text-white">Implemented Project Details and Blogs Coming Soon</span>
             </div>
           </motion.div>
         </div>

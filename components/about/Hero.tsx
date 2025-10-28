@@ -13,16 +13,15 @@ const socialLinks = [
   { name: 'Email', icon: Mail, href: 'mailto:steikould@gmail.com', color: 'hover:text-red-500' },
 ]
 
-// Image paths for the carousel - first one is headshot.jpg, rest are placeholders
+// Image paths for the carousel
 const imageCarousel = [
   '/images/headshot.jpg',
-  '/images/photo-2.jpg',
-  '/images/photo-3.jpg',
-  '/images/photo-4.jpg',
-  '/images/photo-5.jpg',
-  '/images/photo-6.jpg',
-  '/images/photo-7.jpg',
-  '/images/photo-8.jpg',
+  '/images/TechGame.jpg',
+  '/images/Teton1.jpg',
+  '/images/Teton2.jpg',
+  '/images/family.jpg',
+  '/images/fire.jpg',
+  '/images/gunshow.jpg',
 ]
 
 export default function Hero() {
@@ -139,7 +138,7 @@ export default function Hero() {
                     <div className="relative w-full h-full rounded-xl overflow-hidden">
                       <Image
                         src={imageCarousel[currentImageIndex]}
-                        alt={`Photo ${currentImageIndex + 1} of 8`}
+                        alt={`Photo ${currentImageIndex + 1} of ${imageCarousel.length}`}
                         fill
                         className="object-cover transition-opacity duration-300"
                         priority={currentImageIndex === 0}

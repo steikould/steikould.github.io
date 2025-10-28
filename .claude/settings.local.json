@@ -16,7 +16,8 @@
       "Bash(dir \"C:\\Users\\mxmco\\SteiKould\\steikould.github.io\")",
       "Bash(findstr:*)",
       "Bash(git log:*)",
-      "Bash(dir /b)"
+      "Bash(dir /b)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

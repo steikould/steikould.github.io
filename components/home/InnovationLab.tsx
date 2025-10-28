@@ -74,7 +74,7 @@ const innovations: Innovation[] = [
   {
     name: 'Edge Intelligence Deployment',
     description: 'On-device ML inference for remote pipeline monitoring stations enabling real-time decisions without cloud connectivity',
-    status: 'beta',
+    status: 'research',
     techStack: ['TensorFlow Lite', 'Edge TPU', 'KubeEdge', 'MQTT'],
     expectedImpact: 'Real-time decisions at <100ms latency',
     icon: (
@@ -118,7 +118,7 @@ const innovations: Innovation[] = [
   {
     name: 'Autonomous Pipeline Health Monitor',
     description: 'Self-healing system that predicts and prevents failures before they occur using multi-agent AI',
-    status: 'launching',
+    status: 'research',
     techStack: ['Prophet', 'GPT-4', 'Multi-Agent', 'Kubernetes'],
     expectedImpact: '95% reduction in unplanned downtime',
     icon: (

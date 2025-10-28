@@ -78,13 +78,13 @@ export default function Navbar() {
           {/* Right: Utility Links */}
           <div className="hidden md:flex items-center gap-4">
             {/* Available Status Badge */}
-            <div className="relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-dark-secondary border border-accent-success/30">
+            {/* <div className="relative flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-dark-secondary border border-accent-success/30">
               <div className="relative">
                 <div className="absolute inset-0 bg-accent-success rounded-full animate-ping opacity-75" />
                 <div className="w-2 h-2 bg-accent-success rounded-full relative z-10" />
               </div>
               <span className="text-xs text-accent-success font-medium">Available Q2 2026</span>
-            </div>
+            </div> */}
 
             {/* Contact Button */}
             <a
@@ -103,7 +103,7 @@ export default function Navbar() {
                   href={link.href}
                   className="text-white hover:text-accent-blue transition-colors p-2 rounded-lg hover:bg-primary-dark-secondary"
                   title={link.name}
-                  {...(link.download && { download: true })}
+                  {...(link.download && { download: '' })}
                   {...(!link.download && { target: '_blank', rel: 'noopener noreferrer' })}
                 >
                   <Icon className="w-5 h-5" />
@@ -153,13 +153,13 @@ export default function Navbar() {
                 <p className="text-xs text-text-muted uppercase tracking-wider mb-2">Quick Links</p>
 
                 {/* Available Status Badge */}
-                <div className="relative flex items-center gap-2 px-3 py-2 rounded-full bg-primary-dark-secondary border border-accent-success/30 w-fit">
+                {/* <div className="relative flex items-center gap-2 px-3 py-2 rounded-full bg-primary-dark-secondary border border-accent-success/30 w-fit">
                   <div className="relative">
                     <div className="absolute inset-0 bg-accent-success rounded-full animate-ping opacity-75" />
                     <div className="w-2 h-2 bg-accent-success rounded-full relative z-10" />
                   </div>
                   <span className="text-xs text-accent-success font-medium">Available Q2 2026</span>
-                </div>
+                </div> */}
 
                 {/* Contact Button */}
                 <a
@@ -179,7 +179,7 @@ export default function Navbar() {
                       href={link.href}
                       className="flex items-center gap-3 text-white hover:text-accent-blue transition-colors py-2"
                       onClick={() => setIsMenuOpen(false)}
-                      {...(link.download && { download: true })}
+                      {...(link.download && { download: '' })}
                       {...(!link.download && { target: '_blank', rel: 'noopener noreferrer' })}
                     >
                       <Icon className="w-4 h-4" />
