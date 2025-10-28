@@ -37,35 +37,36 @@ const featuredProjects: FeaturedProject[] = [
     projectLink: '/projects/pump-power-consumption-analysis',
     category: 'AI Automation',
     featured: true
-  },
-  {
-    id: 'dataplex-discovery',
-    title: 'Dataplex Discovery System',
-    subtitle: 'Metadata-driven routing for BigQuery data assets',
-    description: 'Enterprise-grade data discovery platform built on GCP Dataplex enabling automated cataloging, governance policies, and lineage tracking across petabytes of data.',
-    highlights: [
-      'Automated metadata cataloging',
-      'Policy-based governance',
-      'Data lineage tracking',
-      '75% reduction in data discovery time'
-    ],
-    projectLink: '/projects/bigquery-cost-optimization',
-    category: 'Data Engineering'
-  },
-  {
-    id: 'iot-pipeline-router',
-    title: 'IoT Pipeline Router',
-    subtitle: 'Enterprise sensor data architecture',
-    description: 'Intelligent transformation system processing 50,000+ daily readings from industrial sensors, converting sparse exception-driven streams into continuous time-series datasets.',
-    highlights: [
-      'Real-time ingestion at scale',
-      'Automated quality checks',
-      'Multi-destination routing',
-      '5M+ events/day with 99.9% reliability'
-    ],
-    projectLink: '/projects/industrial-iot-sensor-intelligence',
-    category: 'Data Engineering'
   }
+  // Hidden but not deleted - Dataplex Discovery and IoT Pipeline Router
+  // {
+  //   id: 'dataplex-discovery',
+  //   title: 'Dataplex Discovery System',
+  //   subtitle: 'Metadata-driven routing for BigQuery data assets',
+  //   description: 'Enterprise-grade data discovery platform built on GCP Dataplex enabling automated cataloging, governance policies, and lineage tracking across petabytes of data.',
+  //   highlights: [
+  //     'Automated metadata cataloging',
+  //     'Policy-based governance',
+  //     'Data lineage tracking',
+  //     '75% reduction in data discovery time'
+  //   ],
+  //   projectLink: '/projects/bigquery-cost-optimization',
+  //   category: 'Data Engineering'
+  // },
+  // {
+  //   id: 'iot-pipeline-router',
+  //   title: 'IoT Pipeline Router',
+  //   subtitle: 'Enterprise sensor data architecture',
+  //   description: 'Intelligent transformation system processing 50,000+ daily readings from industrial sensors, converting sparse exception-driven streams into continuous time-series datasets.',
+  //   highlights: [
+  //     'Real-time ingestion at scale',
+  //     'Automated quality checks',
+  //     'Multi-destination routing',
+  //     '5M+ events/day with 99.9% reliability'
+  //   ],
+  //   projectLink: '/projects/industrial-iot-sensor-intelligence',
+  //   category: 'Data Engineering'
+  // }
 ]
 
 interface ProjectCardProps {

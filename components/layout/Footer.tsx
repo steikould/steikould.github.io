@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Github, Linkedin, Mail, Twitter, Download } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,10 +12,10 @@ export default function Footer() {
   ]
 
   const footerLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
+    { name: 'Home', href: '/', enabled: true },
+    { name: 'Projects', href: '/projects', enabled: false },
+    { name: 'Blog', href: '/blog', enabled: false },
+    { name: 'About', href: '/about', enabled: true },
   ]
 
   return (
@@ -46,6 +46,19 @@ export default function Footer() {
                 )
               })}
             </div>
+
+            {/* Download Resume Button */}
+            <a
+              href="/MCourseyResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-accent-blue hover:bg-blue-600 text-white text-sm font-medium rounded-lg transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            >
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Download className="w-4 h-4 relative z-10" />
+              <span className="relative z-10">Download Resume</span>
+            </a>
           </div>
 
           {/* Quick Links */}
@@ -53,13 +66,22 @@ export default function Footer() {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <div className="space-y-2">
               {footerLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="block text-gray-400 hover:text-accent-blue transition-colors"
-                >
-                  {link.name}
-                </Link>
+                link.enabled ? (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block text-gray-400 hover:text-accent-blue transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <div
+                    key={link.name}
+                    className="block text-gray-600 cursor-not-allowed"
+                  >
+                    {link.name} <span className="text-xs text-gray-500">(Coming Soon)</span>
+                  </div>
+                )
               ))}
             </div>
           </div>

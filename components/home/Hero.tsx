@@ -23,7 +23,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="eyebrow mb-6"
           >
-            Cyber-Physical Systems & ML Engineering for Industrial Operations
+            Build End-to-End AI Systems That Drive Business Value
           </motion.p>
 
           {/* Main Headline */}
@@ -44,9 +44,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-subheadline md:text-subheadline-mobile text-text-light-gray mb-12 max-w-[700px] mx-auto leading-relaxed"
           >
-            I build production-grade ML systems tailored for cyber-physical industrial operations—from
-            predictive maintenance to real-time optimization. Purpose-built solutions that cut costs
-            by 30%+ and predict equipment failures months in advance.
+            I design and deploy complete data intelligence solutions—integrating data engineering, ML pipelines, and AI inference into domain-specific dashboards and applications. Production-grade systems that transform raw data into actionable insights, automate complex workflows, and deliver measurable ROI for business stakeholders.
           </motion.p>
 
           {/* Coming Soon Badge */}

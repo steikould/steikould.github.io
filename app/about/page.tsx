@@ -14,7 +14,7 @@ export default function AboutPage() {
       <Hero />
       <div className="bg-primary-light">
         <Timeline />
-        <SkillsList />
+        {/* <SkillsList /> */}
         <Certifications />
       </div>
     </div>

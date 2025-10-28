@@ -26,15 +26,18 @@ const timelineEvents: TimelineEvent[] = [
     startDate: 'April 2025',
     type: 'work',
     description: [
-      'Architected intelligent sensor data transformation system converting sparse IoT streams into continuous time-series datasets using statistical ML models and automated outlier detection',
-      'Led multi-agent AI architecture for drag-reducing agent optimization, migrating legacy spreadsheet analysis into scalable web platform with natural language queries',
-      'Delivered enterprise AI transformation generating $1M+ annual savings through automated vendor selection, fuel blending optimization, and intelligent procurement'
+      'Developed natural language query interface enabling non-technical pipeline operators to request sensor data through conversational prompts without SQL knowledge, prototyping in Vertex AI Workbench with Gemini models before transitioning to deterministic rule-based prompting for reliable BigQuery SQL generation',
+      'Implemented automated data validation workflows with configurable business rules enforcing operational limits across pipeline segments, designing centralized business rules table in BigQuery with temporal versioning and complete audit history',
+      'Developed machine learning models for pump anomaly detection, progressing from BigQuery ML statistical methods (78% accuracy) to Vertex AI AutoML Tables (85% accuracy), evaluating production ensemble architecture combining Isolation Forest, LSTM neural networks, and XGBoost with SHAP-based explainability',
+      'Engineered real-time ML inference pipeline using Dataflow streaming jobs processing IoT sensor data with automated feature engineering (rolling statistics, rate-of-change calculations, cross-sensor correlations) before routing to Vertex AI prediction endpoints',
+      'Enabled advanced analytics across industrial IoT infrastructure by architecting intelligent sensor data transformation system converting sparse, exception-driven streams into continuous time-series datasets using statistical ML models and automated outlier detection',
+      'Orchestrated MLOps pipelines on Vertex AI with automated CI/CD workflows, custom containerization, and secure deployment practices for regulated industrial environments'
     ],
-    technologies: ['Python', 'Vertex AI', 'BigQuery', 'MLflow', 'LangGraph', 'RAG', 'Google ADK'],
+    technologies: ['Python', 'TypeScript', 'Vertex AI', 'BigQuery', 'BigQuery ML', 'Dataflow', 'Cloud Run', 'Gemini', 'AutoML', 'LSTM', 'XGBoost', 'Isolation Forest', 'SHAP', 'MLOps'],
     achievements: [
-      '$1M+ annual operational savings delivered',
-      'Built comprehensive MLOps framework for regulated industrial environments',
-      'Deployed intelligent procurement system saving $150K+ annually'
+      '$1M+ annual operational savings through AI transformation',
+      'Deployed production ML inference with 85% anomaly detection accuracy',
+      'Enabled non-technical operators to query sensor data via natural language'
     ]
   },
   {
@@ -46,11 +49,15 @@ const timelineEvents: TimelineEvent[] = [
     endDate: 'April 2025',
     type: 'work',
     description: [
-      'Transformed experimental TensorFlow notebook into enterprise-grade forecasting system with automated training pipelines and GPU acceleration on Vertex AI',
-      'Optimized model architecture using constraint optimization and mixed-integer programming, achieving 4% improvement over O9 Solutions baseline',
-      'Deployed production forecasting solution projected to deliver $1M annual savings, validated through five-year historical backtesting'
+      'Transformed experimental TensorFlow notebook into enterprise-grade forecasting system, architecting robust MLOps infrastructure on Vertex AI with automated training pipelines, GPU acceleration, and distributed processing for scalable deployment',
+      'Optimized model architecture using advanced programming and constraint optimization, implementing concurrent and mixed-integer programming, early stopping, and gradient descent to achieve 4% performance improvement over O9 Solutions baseline',
+      'Deployed production forecasting solution projected to deliver $1M annual savings, validated through comprehensive five-year historical backtesting and rigorous performance analysis',
+      'Engineered end-to-end ML pipelines on GCP, utilizing Vertex AI for time series forecasting with custom TensorFlow, PyTorch, Prophet, and GreyKite models while supporting automated deployment capabilities',
+      'Built comprehensive ML infrastructure including feature selection tools, distributed model training, and support for custom models, BigQuery ML, and AutoML',
+      'Enhanced model training efficiency by 25% through optimized data access and storage, creating feature stores on BigQuery and leveraging managed datasets and metadata frameworks',
+      'Implemented comprehensive data governance strategy using GCP Dataplex with hierarchical metadata tagging and labeling, establishing data mesh architecture for domain-driven data ownership'
     ],
-    technologies: ['TensorFlow', 'PyTorch', 'Vertex AI', 'BigQuery', 'Prophet', 'GreyKite', 'PySpark'],
+    technologies: ['TensorFlow', 'PyTorch', 'Vertex AI', 'BigQuery', 'BigQuery ML', 'Prophet', 'GreyKite', 'AutoML', 'GCP Dataplex', 'TensorBoard', 'Vizier'],
     achievements: [
       '$1M projected annual savings from forecasting system',
       'Enhanced model training efficiency by 25%',
@@ -66,14 +73,15 @@ const timelineEvents: TimelineEvent[] = [
     endDate: '2022',
     type: 'work',
     description: [
-      'Architected scalable ETL pipeline infrastructure using PySpark, processing 10TB+ datasets across 5+ concurrent research projects',
-      'Built enterprise-grade data standardization platform that accelerated retraining cycles by 60% for 5+ researchers',
-      'Developed full-stack transportation optimization platform with real-time vehicle tracking and ML-based route optimization serving 50+ daily operations'
+      'Architected scalable ETL pipeline infrastructure using PySpark frameworks, processing TB+ of diverse academic and transportation datasets across 5+ concurrent research projects while establishing automated data preparation workflows',
+      'Built enterprise-grade data standardization and ingestion platform leveraging PySpark SQL and Pandas, creating reusable pipeline templates that accelerated retraining cycles by 60% and enabled 5+ researchers to rapidly prototype and deploy solutions',
+      'Established comprehensive cloud infrastructure supporting 5+ research scientists, managing AWS/GCP environments including Jupyter notebooks, compute instances, and distributed processing pipelines with 90%+ uptime SLA',
+      'Developed full-stack transportation optimization platform with real-time vehicle tracking system and ML-based route optimization, serving 50+ daily shuttle operations while integrating manual routing adjustments and predictive analytics'
     ],
-    technologies: ['PySpark', 'Pandas', 'AWS', 'GCP', 'Jupyter', 'SQL'],
+    technologies: ['PySpark', 'Pandas', 'AWS', 'GCP', 'Jupyter', 'SQL', 'ML Optimization'],
     achievements: [
       'Reduced research setup time from weeks to hours',
-      'Improved operational efficiency by 25%',
+      'Improved operational efficiency by 25% with predictive analytics',
       'Maintained 90%+ uptime SLA for ML experimentation infrastructure'
     ]
   },
@@ -86,13 +94,14 @@ const timelineEvents: TimelineEvent[] = [
     endDate: '2021',
     type: 'work',
     description: [
-      'Sole technical architect responsible for end-to-end platform development from architecture through production deployment',
-      'Built complete data infrastructure processing 10TB+ datasets and full-stack applications serving 50+ daily users',
-      'Established scalable foundations enabling 5+ researchers to rapidly prototype and deploy ML solutions'
+      'Sole technical architect responsible for end-to-end platform development, from initial architecture through production deployment',
+      'Built complete data infrastructure processing TB+ datasets, ML operations platform, and full-stack applications serving 50+ daily users',
+      'Owned entire technical lifecycle: architecture design, implementation, model integration, user testing, and iterative improvements based on customer feedback',
+      'Established scalable foundations that enabled 5+ researchers to rapidly prototype and deploy ML solutions'
     ],
-    technologies: ['Python', 'React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker'],
+    technologies: ['Python', 'React', 'Node.js', 'AWS', 'PostgreSQL', 'Docker', 'ML Operations'],
     achievements: [
-      'Company remains profitable after 5+ years',
+      'Company remains profitable and operating successfully for 5+ years',
       'Owned entire technical lifecycle from design to deployment',
       'Built platform serving 50+ daily users with ML-powered optimization'
     ]
@@ -106,15 +115,17 @@ const timelineEvents: TimelineEvent[] = [
     endDate: '2019',
     type: 'work',
     description: [
-      'Led team of 10-15 engineers managing $2-4M annual project portfolio across Fortune 500 clients',
-      'Delivered $100M+ in client value through digital transformation initiatives for tax and financial strategies',
-      'Drove automation initiatives generating multi-million-dollar savings by optimizing financial calculations and tax positioning'
+      'Led team of 5-10 engineers and consultants, managing $1-1.5M annual project portfolio across large corporate clients',
+      'Delivered $50M+ in client value through digital transformation initiatives surrounding tax and financial strategies with large-scale commercial real estate, technology companies, and automated outsourcing solutions',
+      'Drove digital transformation initiatives generating multi-million-dollar client savings by automating tax/financial calculations, aggregating data, and optimizing tax positioning strategies',
+      'Established technical architecture and governance frameworks to ensure GAAP/IFRS compliance and regulatory adherence, providing domain expertise and maintaining strict data integrity and audit trail requirements',
+      'Built enduring client relationships from startups to large corporations, translating technical capabilities into business value and maintaining client communication throughout project lifecycle'
     ],
-    technologies: ['SQL', 'Python', 'ETL Tools', 'ERP Systems', 'Data Warehousing'],
+    technologies: ['SQL', 'Python', 'ETL Tools', 'ERP Systems', 'Data Warehousing', 'GAAP/IFRS Compliance'],
     achievements: [
-      'Scaled from Manager to Director in 3 years',
-      'Grew practice revenue by 15% with 80% team retention',
-      'Led migrations standardizing millions of financial records'
+      'Delivered $50M+ in client value through digital transformation',
+      'Managed $1-1.5M annual project portfolio',
+      'Built governance frameworks ensuring regulatory compliance'
     ]
   },
   {
@@ -126,15 +137,16 @@ const timelineEvents: TimelineEvent[] = [
     endDate: '2014',
     type: 'work',
     description: [
-      'Supported practice growth by architecting client acquisition processes, contributing to doubling practice size',
-      'Generated $2M+ annual revenue across 30+ concurrent engagements',
-      'Led technical hiring and project management across distributed teams in 5 locations'
+      'Managed geographically diverse team, processes, and sales pipeline for tax fixed asset and R&D tax credit projects',
+      'Designed and implemented new statistical sampling process for repairs and R&D credit projects reducing project labor expenses by 30-60%',
+      'Supported practice growth by architecting client acquisition processes, contributing to doubling practice size and generating $2M+ annual revenue across 30+ concurrent engagements',
+      'Managed all project aspects including initial scoping, budgeting, project planning and control, delivery, internal software/tool development, and internal training'
     ],
-    technologies: ['Business Intelligence', 'SQL', 'Project Management Tools'],
+    technologies: ['Business Intelligence', 'SQL', 'Statistical Sampling', 'Project Management Tools'],
     achievements: [
       'Doubled practice size generating $2M+ annual revenue',
-      'Improved project success rates by 30%',
-      'Reduced client onboarding time by 40%'
+      'Reduced project labor expenses by 30-60% through statistical sampling',
+      'Managed 30+ concurrent engagements successfully'
     ]
   },
   {
@@ -146,15 +158,15 @@ const timelineEvents: TimelineEvent[] = [
     endDate: '2011',
     type: 'work',
     description: [
-      'Architected enterprise data warehousing solution for $12B MGM CityCenter mega-project',
-      'Orchestrated cloud migration of 500GB+ critical data to MicroStrategy Cloud for 100+ users',
-      'Consistently achieved top-tier performance recognition (5/5 ratings, top 15% firmwide)'
+      'Architected automated SQL-based fixed asset workflow solution for the $12B MGM CityCenter mega-project, producing 3x results over peers',
+      'Developed historical client/project database with simple linear regression model to accurately estimate potential benefits and identify industries, clients, and project types delivering the highest margin',
+      'Consistently achieved top-tier performance recognition (5/5 ratings, top 15% firmwide), demonstrating technical leadership excellence and strategic value delivery in high-stakes enterprise technology implementations'
     ],
-    technologies: ['MicroStrategy', 'SQL', 'Data Warehousing', 'Cloud Migration'],
+    technologies: ['MicroStrategy', 'SQL', 'Data Warehousing', 'Linear Regression', 'Workflow Automation'],
     achievements: [
-      'Led technical design for $12B mega-project analytics',
-      'Early cloud adoption pioneer with enterprise migration',
-      'Top 15% firmwide performance consistently'
+      'Produced 3x results over peers on $12B mega-project',
+      'Top 15% firmwide performance consistently',
+      'Developed predictive models for project margin optimization'
     ]
   }
 ]

@@ -55,21 +55,15 @@ export default function Hero() {
 
               <div className="space-y-6 text-body-lg text-gray-300 leading-relaxed">
                 <p>
-                  I'm a passionate <span className="text-accent-blue font-semibold">Data Engineer</span> and{' '}
-                  <span className="text-accent-blue font-semibold">ML Engineer</span> with over 3 years of experience
-                  building scalable data infrastructure and intelligent systems that drive business transformation.
+                  I'm a <span className="text-accent-blue font-semibold">Data Intelligence Engineer</span> building end-to-end AI systems that transform how businesses operate and make decisions.
                 </p>
 
                 <p>
-                  My expertise spans the entire data lifecycle—from designing robust ETL pipelines and
-                  real-time streaming architectures to developing sophisticated machine learning models
-                  and deploying AI-powered automation solutions.
+                  My approach spans the complete solution lifecycle—from designing scalable data pipelines and ML infrastructure to developing GenAI-powered automation and delivering domain-specific dashboards that put insights directly into stakeholders' hands. I don't just build models or pipelines; I build data products that business users actually adopt and rely on.
                 </p>
 
                 <p>
-                  I'm particularly passionate about leveraging cutting-edge technologies like LLMs,
-                  cloud-native architectures, and MLOps practices to solve complex business challenges
-                  and unlock the power of data-driven decision making.
+                  I'm passionate about bridging the gap between cutting-edge technology—LLMs, agentic frameworks, cloud-native architectures, MLOps—and tangible business outcomes. Whether it's reducing processing times by 80%, enabling real-time operational decisions, or automating complex workflows, I focus on measurable impact that drives ROI.
                 </p>
               </div>
 

@@ -34,15 +34,6 @@ const ctaCards: CTACard[] = [
     color: 'from-green-500/20 to-emerald-500/20',
     isExternal: true,
     fileInfo: '📥 PDF (2 pages)'
-  },
-  {
-    title: 'Get In Touch',
-    description: 'Available for select consulting projects',
-    icon: <Mail className="w-8 h-8" />,
-    link: 'mailto:steikould@gmail.com',
-    buttonText: "Let's Talk",
-    color: 'from-orange-500/20 to-red-500/20',
-    isExternal: true
   }
 ]
 
@@ -124,74 +115,5 @@ function CTACardComponent({ card, index }: CTACardComponentProps) {
 }
 
 export default function CTAHub() {
-  return (
-    <section className="bg-primary-dark text-white py-20">
-      <div className="container-max px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-section-heading md:text-section-heading-mobile font-bold mb-4">
-            Ready to <span className="text-accent-blue">Connect?</span>
-          </h2>
-          <p className="text-card-title text-text-gray max-w-2xl mx-auto">
-            Let's turn your data challenges into business opportunities
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {ctaCards.map((card, index) => (
-            <CTACardComponent key={card.title} card={card} index={index} />
-          ))}
-        </div>
-
-        {/* Additional Context */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-12 text-center"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-gray-800 rounded-full">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-sm text-gray-400">
-              Available for select consulting projects starting Q2 2025
-            </span>
-          </div>
-        </motion.div>
-
-        {/* Social Proof / Quick Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="mt-12 pt-12 border-t border-gray-800"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="metric-number mb-2">$8M+</div>
-              <div className="metric-label">Annual Savings Delivered</div>
-            </div>
-            <div className="text-center">
-              <div className="metric-number mb-2">15+</div>
-              <div className="metric-label">Production ML Systems</div>
-            </div>
-            <div className="text-center">
-              <div className="metric-number mb-2">10M+</div>
-              <div className="metric-label">Events Processed Daily</div>
-            </div>
-            <div className="text-center">
-              <div className="metric-number mb-2">99.9%</div>
-              <div className="metric-label">System Reliability</div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )
+  return null
 }

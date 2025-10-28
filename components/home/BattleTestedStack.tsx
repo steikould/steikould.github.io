@@ -34,21 +34,6 @@ const technologies: Technology[] = [
     ]
   },
   {
-    name: 'Python',
-    icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M14.25 2.1l-.25-.03-.25.03-10.5 1.71-.25.12v15.54l.25.12 10.5 1.71.25.03.25-.03 10.5-1.71.25-.12V3.93l-.25-.12-10.5-1.71zM15 18.6l-1-.13V5.52l1-.13v13.21zm7-1.07l-5 .81V5.66l5-.81v12.68z"/>
-      </svg>
-    ),
-    color: '#3776AB',
-    whyItWorks: 'Versatile language for ML pipelines, data processing, and industrial automation',
-    realImpact: '50+ production scripts reducing manual work by 80%',
-    keyProjects: [
-      { name: 'Anomaly Detection', link: '/projects/fuel-pump-anomaly-detection' },
-      { name: 'Genetic Fuel Blending', link: '/projects/genetic-algorithm-fuel-blending' }
-    ]
-  },
-  {
     name: 'TensorFlow',
     icon: (
       <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
@@ -93,21 +78,6 @@ const technologies: Technology[] = [
     keyProjects: [
       { name: 'IoT Sensor Router', link: '/projects/industrial-iot-sensor-intelligence' },
       { name: 'Feature Engineering', link: '/projects/pump-power-consumption-analysis' }
-    ]
-  },
-  {
-    name: 'MLflow / Weights & Biases',
-    icon: (
-      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    ),
-    color: '#0194E2',
-    whyItWorks: 'ML experiment tracking and model versioning with full audit trails',
-    realImpact: '3x faster model iteration cycles with full reproducibility',
-    keyProjects: [
-      { name: 'Model Evaluation', link: '/projects/model-evaluation-framework' },
-      { name: 'MLOps Platform', link: '/projects/mlops-regulated-compliance' }
     ]
   },
   {
@@ -206,7 +176,8 @@ function TechCard({ tech, index }: TechCardProps) {
                 </p>
               </div>
 
-              <div>
+              {/* Key Projects section - hidden but not deleted */}
+              {/* <div>
                 <p className="text-xs font-semibold text-purple-400 uppercase tracking-wide mb-2">
                   Key Projects
                 </p>
@@ -223,7 +194,7 @@ function TechCard({ tech, index }: TechCardProps) {
                     </Link>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

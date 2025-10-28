@@ -238,28 +238,6 @@ export default function InnovationLab() {
             <InnovationCard key={innovation.name} innovation={innovation} index={index} />
           ))}
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <p className="text-gray-400 mb-4">
-            Interested in collaborating on cutting-edge AI solutions?
-          </p>
-          <a
-            href="mailto:steikould@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-accent-blue hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Let's Talk
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </motion.div>
       </div>
     </section>
   )
