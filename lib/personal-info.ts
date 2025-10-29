@@ -47,12 +47,12 @@ export const personalInfo = {
   },
 
   // Resume
-  resumeUrl: "/MCoursyResume.pdf", // Put your resume in public folder
+  resumeUrl: "/MCourseyResume.pdf", // Put your resume in public folder
 
   // Company/Freelance Info (if applicable)
   company: {
     name: "Colonial Pipeline",
-    role: "AI/ML Portfolio Archictect, Senior Data Engineer",
+    role: "AI Solutions Architect, Senior Data Engineer",
     website: "https://colpipe.com"
   },
     expertise: [

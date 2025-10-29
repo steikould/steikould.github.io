@@ -20,7 +20,7 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
   {
     id: '1',
-    title: 'Senior Data Engineer & Business Strategist',
+    title: 'Senior ML/Data Engineer & AI Solutions Architect',
     company: 'Colonial Pipeline',
     location: 'Atlanta, GA',
     startDate: 'April 2025',

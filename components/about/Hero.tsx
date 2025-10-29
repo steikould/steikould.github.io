@@ -80,10 +80,17 @@ export default function Hero() {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button size="lg" className="group">
-                  <Download className="w-5 h-5 mr-2" />
-                  Download Resume
-                </Button>
+                <a
+                  href="/MCourseyResume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+                >
+                  <Button size="lg" className="group">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Resume
+                  </Button>
+                </a>
                 <a href="mailto:steikould@gmail.com">
                   <Button variant="secondary" size="lg">
                     <Mail className="w-5 h-5 mr-2" />
